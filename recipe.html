@@ -9,7 +9,159 @@
             .recipe_content {
                 text-align: center;
             }
-        
+            
+            @media (min-width: 800px) {
+                body {
+                    margin-right: 200px;
+                    margin-left:200px;
+                    background-color: pink;
+
+
+                }
+            }
+            body {
+                background-color: white;
+                margin-top: 0;
+                padding-bottom: 300px
+
+            }
+            
+            html {
+                background-color: lightgray;
+            }
+            
+            
+            .menu li, .epilog li {
+                display:inline;
+                font-size: 1.25rem;
+                margin-left: 20px;
+                margin-right: 20px;
+
+            }
+            
+            .header {
+                text-align: center;
+            }
+            
+ 
+            
+            .header .main_logo_img {
+                width: 150px;
+                height: 150px;
+                padding-top: 100px;
+
+            }
+            
+            
+/*            창이 작아 졌을 때 조절 필요         */
+            .header .menu {
+/*                width: 700px;                */
+                height: 40px;
+                background-color: lightgray;
+                
+                margin-left: 100px;
+                margin-right: 100px;
+                margin-top: 60px;
+            }
+            
+            .recipe_content {
+                margin: 40px;
+            }
+            
+            .recipe_content .main_img {
+                width: 500px;
+                height: 300px;
+                margin: 40px;
+            }
+            
+            
+            .profile_img {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .profile_name {
+                display:block;
+            }
+            
+            .tap {
+                margin: 40px;
+                padding: 12px;
+                padding-top: 20px;
+                padding-bottom: 30px;
+                background-color: floralwhite;
+
+            }
+            
+            .epilog {
+                width: 1080px;
+                border: red 1px solid;
+                margin: auto;
+            }
+            
+            .paging_number {
+                text-align: center;
+                margin-top: 80px;
+            }
+            
+            .recipe_process img {
+                width: 360px;
+                height: 240px;
+            }
+            
+            #mine_picture img {
+                width: 150px;
+                height: 100px;
+            }
+            
+            button {
+                width: 80px;
+                height: 40px;
+            }
+            .scrap_n_share {
+                margin-top: 60px;
+
+            }
+            
+            .ingredient {
+                background-color: aliceblue;
+                width: 920px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            
+            .module {
+                margin-top: 120px;
+                margin-bottom: 120px;
+            }
+            
+            .header_search {
+                margin-top: 20px;
+
+            }
+            #main_q {
+                width: 300px;
+                height: 40px;
+                padding-left: 15px;
+            }
+            
+            .recipe_process {
+                padding-left: 150px;
+            }
+            .recipe_process li {
+                text-align: left;
+            }
+            
+            .tap #comment {
+                height: 700px;
+            }
+            
+            .listed_comment {
+                margin-bottom: 20px;
+            }
+            
+            
         </style>
     </head>
     
@@ -17,33 +169,33 @@
     
     <body>
         
-        <a href="main.html">요리터</a>
         
+        <div class="header">
+            <a href="main.html">
+               <img class="main_logo_img" src="" alt="로고">
+
+            </a>
+
         
-        
-        <form class="header_search">
-            <label for="main_q">음식명/재료명 검색</label>
-            <input type="text" id="main_q" placeholder="음식명/재료명 검색" name="">
-            <input type="submit" name="" value="검색">
-        </form>
-        
-        
-        <div>
-            <ul>
+            <form class="header_search">
+<!--                <label for="main_q">음식명/재료명 검색</label>-->
+                <input type="text" id="main_q" placeholder="음식명/재료명 검색" name="">
+                <button type="submit">검색하기</button>
+            </form>
+
+
+            <ul class=menu>
                 <li>요리목록</li>
                 <li>인기요리</li>
                 <li>제철요리</li>
                 <li>안내사항</li>
                 <li>마이페이지</li>  
             </ul>
-           
         </div>
         
-        <div class="scrap_n_share">
 
-            <button>스크랩</button>
-            <button>공유</button>
-        </div>
+        
+
         
         
         
@@ -51,37 +203,56 @@
         
         <div class="recipe_content">
         
-            <img src="" alt="메인사진">
+            <div class="scrap_n_share">
+
+                <button>스크랩</button>
+                <button>공유</button>
+                
+<!--                공유박스 추가-->
+            </div>
+        
+            <img class="main_img" src="" alt="메인사진">
 
             <h1>쓸쓸하랴 얼음에</h1>
-            <img src="" alt="글쓴이 프로필">
-            글쓴이 닉네임
+            <img class="profile_img" src="" alt="글쓴이 프로필">
+            <div class="profile_name">글쓴이 닉네임</div>
             
             
-            <h2>요리 재료</h2>
-            <div>
-               <h3>재료</h3>
-                <ul>
-                    <li>딸기</li>
-                    <li>배추</li>
-                </ul>
+            <div class="module">
+               
+                <h2>요리 재료</h2>
+                <div class="ingredient">
+                    <h3>재료</h3>
+                    <ul>
+                        <li>딸기</li>
+                        <li>배추</li>
+                    </ul>
+
+                    <h3>양념</h3>
+
+                    소금
+
+                </div>
                 
-                <h3>양념</h3>
-                   
-                   소금
-                    
             </div>
             
             
-            <h2>만드는 법</h2>
-            
-            <ol class="recipe_process">
-                <li>사람들이 설명을 얼마나 쓰게 될까</li>
-                
-                <li>흐음 이러케 저러케 만드세요</li>
-                <li>굳이 소재목 형식으로 할 필욘 없겠지</li>
-                이렇게 하면 됩니다.
-            </ol>
+            <div class="module">
+                <h2>만드는 법</h2>
+
+                <ol class="recipe_process">
+                    <li>사람들이 설명을 얼마나 쓰게 될까</li>
+                    <img src="" alt="설명1사진">
+
+                    <li>흐음 이러케 저러케 만드세요</li>
+                    <img src="" alt="설명2사진">
+
+                    <li>굳이 소재목 형식으로 할 필욘 없겠지</li>
+                    이렇게 하면 됩니다.
+                    <img src="" alt="설명3사진">
+
+                </ol>
+            </div>
         
         </div>
 
@@ -91,9 +262,12 @@
             <button>스크랩</button>
             <button>공유</button>
         </div>
-
         
-        <div class="epliog(postscript)">
+        
+
+        <div class="epilog">
+            <h2>후기</h2>
+
             <ul>
                 <li>얼마나 맛있었나요?</li>
                 <li>요리팁 공유해요</li>
@@ -101,37 +275,43 @@
             </ul>
         
             <!-- 복수 명사로 쓰는 게 나을까? -->
-            <div class="comment">
-                <div class="comment_writing_box">
-                    <img src="" alt="댓글 프로필">
-                    별점
-                    글 쓰는 내용
-                </div> 
+            <div class="tap" id="comment">
+               
+               
+               <form class="new_comment_box" action="">
+                   <div>
+                        <img class="profile_img" src="" alt="댓글 프로필">
+                        별점
+                        <textarea name="" id="new_comment_content" cols="100" rows="5"></textarea>
+                        <button type="submit">올리기</button>
+                    </div>
+                   
+                </form>
 
                 <span>댓글 수 n개</span>
 
                 <div class="comment_list">
-                    <div class="listed_omment">
-                    <img src="" alt="댓글 프로필">
-                    댓글쓴이 이름 
-                    <!-- 이름의 위치를 어디에 둘까 -->
-                    별점
-                    글 쓴 내용
-                </div>
+                    <div class="listed_comment">
+                        <img class="profile_img" src="" alt="댓글 프로필">
+                        댓글쓴이 이름 
+                        <!-- 이름의 위치를 어디에 둘까 -->
+                        별점
+                        글 쓴 내용
+                    </div>
 
-                <div class="comment_list">
-                    <div class="listed_omment">
-                    <img src="" alt="댓글 프로필">
-                    댓글쓴이 이름
-                    별점
-                    글 쓴 내용
+                    <div class="listed_comment">
+                        <img class="profile_img" src="" alt="댓글 프로필">
+                        댓글쓴이 이름
+                        별점
+                        글 쓴 내용
+                    </div>
                 </div>
 
                 <button>더 불러오기</button>
 
             </div>
 
-            <div class="tip">
+            <div class="tap" id="tip">
 
                 <button>글쓰기</button>
 
@@ -157,7 +337,7 @@
                 </div>
             </div>
 
-            <div class="mine_picture">
+            <div class="tap" id="mine_picture">
 
                 <button>글쓰기</button>
 
