@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Search</title>
+    <meta charset="utf-8">
+    <style>
+      #logo {
+          width: 150px;
+          height: 150px;
+        } 
+      h1 {
+          font-size: 1.875rem;
+        }
+      #menu_box {
+          width: 900px;
+          height: 55px;
+          background-color: gray;
+        }
+      .menu_title {
+          font-size: 1.25rem;
+        }
+      .selected_ingredient {
+          font-size: 1.25rem;
+        }
+      .situation_icon {
+          width: 60px;
+          height: 60px;
+        }
+      h2 {
+          font-size: 1.25rem
+        }
+      h3 {
+          font-size: 1rem
+        }
+      h4 {
+          font-size: 0.875rem
+        }
+      .big_input {
+          width: 400px;
+          height: 40px;
+        }    
+      .small_input {
+          width: 300px;
+          height: 40px;
+        }
+      button {
+        width:90px;
+        height: 45px;
+        }
+    </style>
+  </head>
+  
+  
+  <body>
+    <a href="" id="logo"><img src="logo.jpg" alt="로고"></a>
+    <div id="menu_box">
+      <a href="" class="menu_title">요리목록</a>
+      <a href="" class="menu_title">인기요리</a>
+      <a href="" class="menu_title">제철요리</a>
+      <a href="" class="menu_title">안내사항</a>
+      <a href="" class="menu_title">마이페이지</a>
+    </div> 
+    
+    <div>
+        <input type="text" placeholder="음식명/재료명 재검색" class="big_input">
+        <button>검색</button>
+    </div>
+    
+    
+    <h1>검색결과 창:토마토, 파스타면, 참치, 간장/-기름</h1>
+    <div class="selected_ingredient">상황</div>
+    <div><img src="situation_icon.jpg" class="situation_icon"></div>
+    
+    <div class="selected_ingredient">포함할 재료</div>
+   
+    <div>
+    <input type="text" placeholder="재료명" class="small_input">
+    <button>검색</button>
+    </div>  
+      
+    <div>토마토</div>
+    <div>파스타면</div>
+    <div>참치</div>
+    <div>간장</div>
+    
+    <div class="selected_ingredient">포함하지 않을 재료</div>
+    <div class="small_input">
+    <input type="text" placeholder="재료명" class="small_input">
+    <button>검색</button>
+    </div>  
+    <div>기름</div>
+    
+    
+    12개씩 표시
+    <select class="how_much">
+        <option value="12개">12개씩 보기</option>
+        <option value="24개">24개씩 보기</option>      
+        <option value="36개">36개씩 보기</option>
+    </select>
+    
+    
+    <h2><a>1.딸기 스프</a></h2>
+    
+    
+    <h3><a>예상외로 맛있는 맛</a></h3>
+    
+    
+    <h4>크림스프 분말, 딸기, 블루베리믹스앤견과류, 우유, 더보기</h4>
+    
+    
+    
+    <h2><a>2.딸기 스프</a></h2>
+    
+    
+    <h3><a>예상외로 맛있는 맛</a></h3>
+    
+    
+    <h4>크림스프 분말, 딸기, 블루베리믹스앤견과류, 우유, 더보기</h4>    
+    
+    
+    
+    <h2><a>3.딸기 스프</a></h2>
+    
+    
+    <h3><a>예상외로 맛있는 맛</a></h3>
+    
+    
+    <h4>크림스프 분말, 딸기, 블루베리믹스앤견과류, 우유, 더보기</h4>    
+    
+    
+    
+    <h2><a>4.딸기 스프</a></h2>
+    
+    
+    <h3><a>예상외로 맛있는 맛</a></h3>
+    
+    
+    <h4>크림스프 분말, 딸기, 블루베리믹스앤견과류, 우유, 더보기</h4>       
+    
+    페이징
+  </body>
+</html>
