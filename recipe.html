@@ -6,6 +6,35 @@
         
         <style>
             
+            
+/*            16px 빨강색*/
+            .count_comment {
+                font-size: 1rem;
+                color: red;
+            }
+            
+/*            18px 파랑색*/
+            button, .ingredient, .profile_name, .comment_content, .tap .content {
+                font-size: 1.125rem;
+                color: blue;
+            }
+            
+/*            20px 초록색*/
+            .menu_box, .tap .headline, .ingredient h3 {
+                font-size: 1.25rem;
+                color: green;
+            }
+            
+/*            24px 보라색*/
+            .recipe_process {
+                font-size: 1.5rem;
+                color: violet;
+            }
+            
+            
+            
+            
+            
             .recipe_content {
                 text-align: center;
             }
@@ -30,8 +59,11 @@
                 background-color: lightgray;
             }
             
+            h2 {
+                margin-bottom: 50px;
+            }
             
-            .menu li, .epilog li {
+            .menu_box li, .epilog li {
                 display:inline;
                 font-size: 1.25rem;
                 margin-left: 20px;
@@ -54,7 +86,7 @@
             
             
 /*            창이 작아 졌을 때 조절 필요         */
-            .header .menu {
+            .header .menu_box {
 /*                width: 700px;                */
                 height: 40px;
                 background-color: lightgray;
@@ -80,10 +112,6 @@
                 height: 60px;
             }
             
-            .profile_name {
-                display:block;
-            }
-            
             .tap {
                 margin: 40px;
                 padding: 12px;
@@ -99,9 +127,18 @@
                 margin: auto;
             }
             
+            .epilog ul li {
+                width: 180px;
+                height: 60px;
+            }
+            
             .paging_number {
                 text-align: center;
                 margin-top: 80px;
+            }
+            .paging_number a {
+                width: 40px;
+                height: 40px;
             }
             
             .recipe_process img {
@@ -132,8 +169,8 @@
             
             
             .module {
-                margin-top: 120px;
-                margin-bottom: 120px;
+                margin-top: 130px;
+                margin-bottom: 130px;
             }
             
             .header_search {
@@ -157,7 +194,7 @@
                 height: 700px;
             }
             
-            .listed_comment {
+            .listed_content {
                 margin-bottom: 20px;
             }
             
@@ -184,7 +221,7 @@
             </form>
 
 
-            <ul class=menu>
+            <ul class=menu_box>
                 <li>요리목록</li>
                 <li>인기요리</li>
                 <li>제철요리</li>
@@ -288,22 +325,22 @@
                    
                 </form>
 
-                <span>댓글 수 n개</span>
+                <span class="count_comment">댓글 수 n개</span>
 
                 <div class="comment_list">
-                    <div class="listed_comment">
+                    <div class="listed_content">
                         <img class="profile_img" src="" alt="댓글 프로필">
-                        댓글쓴이 이름 
+                        <span class="profile_name">글쓴이</span>
                         <!-- 이름의 위치를 어디에 둘까 -->
                         별점
-                        글 쓴 내용
+                        <span class="comment_content">글 쓴 내용</span>
                     </div>
 
-                    <div class="listed_comment">
+                    <div class="listed_content">
                         <img class="profile_img" src="" alt="댓글 프로필">
-                        댓글쓴이 이름
+                        <span class="profile_name">글쓴이</span>
                         별점
-                        글 쓴 내용
+                        <span class="comment_content">글 쓴 내용</span>
                     </div>
                 </div>
 
@@ -315,10 +352,11 @@
 
                 <button>글쓰기</button>
 
-                <div>
-                    글제목
-                    글쓴이
-                    글 내용
+                <div class="listed_content">
+                    <span class="headline">글 제목</span>
+                    <span class="profile_name">글쓴이</span>
+
+                    <span class="content">글 내용</span>
                 </div>
 
                 <div class="paging_number">
@@ -341,11 +379,11 @@
 
                 <button>글쓰기</button>
 
-                <div>
+                <div class="listed_content">
                     <img src="" alt="요리자랑 사진">
-                    글제목
-                    글쓴이
-                    글 내용
+                    <span class="headline">글 제목</span>
+                    <span class="profile_name">글쓴이</span>
+                    <span class="content">글 내용</span>
                 </div>
 
                 <div class="paging_number">
