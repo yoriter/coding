@@ -1,9 +1,13 @@
 <!doctype html>
 <html>
   <head>
-    <title>Search</title>
+    <title>검색결과 - 요리터</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="font/font.css">
     <style>
+      body {font-family: "NanumGothic-Regular";
+        }
+      a {text-decoration: none; color: black;}
       #logo {
           width: 150px;
           height: 150px;
@@ -11,14 +15,21 @@
       h1 {
           font-size: 1.875rem;
         }
-      #menu_box {
-          width: 900px;
-          height: 55px;
-          background-color: gray;
-        }
-      .menu_title {
+      ul.menu_box,.menu_box li{
+          list-style-type: none;
+          text-align:center;
+          font-weight: bold;
           font-size: 1.25rem;
+          border: 1px solid red;
+          
+        }    
+        ul.menu_box {width: 1000px;
+            height: 100px;}
+        
+      .menu_box li{
+        display: inline;
         }
+        li a.menu_box
       .selected_ingredient {
           font-size: 1.25rem;
         }
@@ -53,15 +64,16 @@
   
   <body>
     <a href="" id="logo"><img src="logo.jpg" alt="로고"></a>
-    <div id="menu_box">
-      <a href="" class="menu_title">요리목록</a>
-      <a href="" class="menu_title">인기요리</a>
-      <a href="" class="menu_title">제철요리</a>
-      <a href="" class="menu_title">안내사항</a>
-      <a href="" class="menu_title">마이페이지</a>
-    </div> 
-    
-    <div>
+    <!--<nav>-->
+    <ul class="menu_box">
+      <li><a href="">요리목록</a></li>
+      <li><a href="" >인기요리</a></li>
+      <li><a href="">제철요리</a></li>
+      <li><a href="">안내사항</a></li>
+      <li><a href="">마이페이지</a></li>
+    </ul>
+    <!--</nav>-->
+    <div> 
         <input type="text" placeholder="음식명/재료명 재검색" class="big_input">
         <button>검색</button>
     </div>
@@ -98,15 +110,21 @@
         <option value="36개">36개씩 보기</option>
     </select>
     
-    
+    <div>
+      <div>
+        <h3><a>예상외로 맛있는 맛</a></h3>
+        <div>
+           <h4>크림스프 분말, 딸기, 블루베리믹스앤견과류, 우유, 더보기</h4> 
+        </div>  
+      </div>
+    </div>
     <h2><a>1.딸기 스프</a></h2>
     
     
     <h3><a>예상외로 맛있는 맛</a></h3>
     
     
-    <h4>크림스프 분말, 딸기, 블루베리믹스앤견과류, 우유, 더보기</h4>
-    
+
     
     
     <h2><a>2.딸기 스프</a></h2>
