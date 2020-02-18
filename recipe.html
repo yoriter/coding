@@ -12,34 +12,71 @@
                 font-size: 1rem;
                 color: red;
             }
+            .count_comment {
+                clear: both;
+            }
             
-/*            18px 파랑색*/
-            button, .ingredient, .profile_name, .comment_content, .tap .content {
+/*            18px 파랑색 기본 글씨 크기를 18로 봐도 무방할 것 같다. 나머지를 예외로 하고.*/
+            button, .ingredient, .profile_name, .comment_content, .tap .content, li span {
                 font-size: 1.125rem;
                 color: blue;
             }
             
-/*            20px 초록색*/
-            .menu_box, .tap .headline, .ingredient h3 {
-                font-size: 1.25rem;
-                color: green;
+            .comment_content {
+                float:left;
+                width: 80%;
             }
             
+            #comment .new_comment_box button {
+                float:right;
+                color: red;
+                margin: 20px;
+            }
+            
+            .listed_content .profile_name {
+                padding: 3px;
+                margin: auto;
+            }
+            
+            .content {
+                clear:both;
+            }
+            
+/*            20px 초록색*/
+            .menu_box li, .epilog li, .tap .headline, .ingredient h3 {
+                font-size: 1.25rem;
+                color: green;
+                margin-right: 40px;
+            
+            }
+            
+            
 /*            24px 보라색*/
-            .recipe_process {
+            .recipe_process li {
                 font-size: 1.5rem;
                 color: violet;
             }
             
-            
-            
-            
-            
-            .recipe_content {
-                text-align: center;
+/*            30px*/
+            h1 {
+                font-size: 1.875rem;
+                color: aqua;
             }
             
-            @media (min-width: 800px) {
+            
+            
+            
+            
+            
+            
+            
+           
+            
+            html {
+                background-color: lightgray;
+            }
+            
+             @media (min-width: 800px) {
                 body {
                     margin-right: 200px;
                     margin-left:200px;
@@ -55,21 +92,31 @@
 
             }
             
-            html {
-                background-color: lightgray;
-            }
-            
             h2 {
                 margin-bottom: 50px;
             }
             
-            .menu_box li, .epilog li {
-                display:inline;
-                font-size: 1.25rem;
-                margin-left: 20px;
-                margin-right: 20px;
+            button {
+/*                width: 80px;*/
+                height: 40px;
+                min-width: 80px;
+            }
+            
+            #comment button.more {
+                clear: both;
+                color: red;
+                margin: auto;
+                display: block;
+            }
+            
+            
+            .scrap_n_share {
+                padding-top: 60px;
 
             }
+            
+            
+
             
             .header {
                 text-align: center;
@@ -77,28 +124,53 @@
             
  
             
-            .header .main_logo_img {
+            #logo {
                 width: 150px;
                 height: 150px;
                 padding-top: 100px;
 
             }
             
+            .header_search {
+                margin-top: 20px;
+
+            }
+            #main_q {
+                width: 300px;
+                height: 40px;
+                padding-left: 15px;
+            }
+            
             
 /*            창이 작아 졌을 때 조절 필요         */
-            .header .menu_box {
+            .menu_box {
 /*                width: 700px;                */
-                height: 40px;
+                padding-top: 20px;
+                padding-bottom:20px;
                 background-color: lightgray;
                 
+/*
                 margin-left: 100px;
                 margin-right: 100px;
+*/
                 margin-top: 60px;
+                display: inline-block;
+                padding-inline-end:40px;
             }
+            
+            .menu_box li, .epilog li {
+                display:inline;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            
+            
             
             .recipe_content {
                 margin: 40px;
+                text-align: center;
             }
+            
             
             .recipe_content .main_img {
                 width: 500px;
@@ -112,57 +184,48 @@
                 height: 60px;
             }
             
-            .tap {
-                margin: 40px;
-                padding: 12px;
-                padding-top: 20px;
-                padding-bottom: 30px;
-                background-color: floralwhite;
+            .new_comment_box .profile_img {
+                float:left;
+                margin: 20px;
+            }
+            
+            
+            
+            .recipe_process {
+                padding-left: 150px;
+            }
+            .recipe_process li {
+                text-align: left;
+                clear: both;           
+/*                overflow: hidden;*/
 
+                margin-bottom: 60px;
             }
-            
-            .epilog {
-                width: 1080px;
-                border: red 1px solid;
-                margin: auto;
-            }
-            
-            .epilog ul li {
-                width: 180px;
-                height: 60px;
-            }
-            
-            .paging_number {
-                text-align: center;
-                margin-top: 80px;
-            }
-            .paging_number a {
-                width: 40px;
-                height: 40px;
-            }
+        
             
             .recipe_process img {
                 width: 360px;
                 height: 240px;
+                
+                margin-bottom: 60px;
+                
+                float:right;
+                
             }
-            
-            #mine_picture img {
-                width: 150px;
-                height: 100px;
-            }
-            
-            button {
-                width: 80px;
-                height: 40px;
-            }
-            .scrap_n_share {
-                margin-top: 60px;
 
+            
+            .recipe_content + .scrap_n_share {
+                clear: both;
+                text-align: center;
             }
+            
             
             .ingredient {
                 background-color: aliceblue;
-                width: 920px;
+                
+                padding-left: 90px;
+                padding-right: 90px;
+
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -173,31 +236,80 @@
                 margin-bottom: 130px;
             }
             
-            .header_search {
-                margin-top: 20px;
+            
+            
+            
+            
+            
+            .epilog {
+/*                width: 1080px;*/
+
+/*                border: red 1px solid;*/
+                margin: auto;
+            }
+            
+            .epilog ul li {
+                width: 180px;
+                height: 60px;
+            }
+            
+            .tap {
+                margin: 40px;
+                padding: 12px;
+                padding-top: 20px;
+                padding-bottom: 30px;
+                background-color: floralwhite;
 
             }
-            #main_q {
-                width: 300px;
-                height: 40px;
-                padding-left: 15px;
-            }
-            
-            .recipe_process {
-                padding-left: 150px;
-            }
-            .recipe_process li {
-                text-align: left;
-            }
-            
             .tap #comment {
                 height: 700px;
             }
-            
+
+            textarea {
+                display: block;
+                width: 70%;
+                height: 60px;
+                float:left;
+            }
             .listed_content {
-                margin-bottom: 20px;
+                padding:30px;
+                padding-bottom: 30px;
+                display: inline-block;
+/*                overflow: hidden;*/
+/*                clear: both;*/
             }
             
+            .tap .headline {
+                display: inline;
+            }
+            
+            .comment_profile {
+                clear:both;
+                float:left;
+                margin-right: 30px;
+            }
+            
+            #mine_picture .listed_content, #tip .listed_content{
+                height: 100px;
+                margin-bottom: 60px;
+            }
+            
+            #mine_picture img {
+                width: 150px;
+                height: 100px;
+                float: left;
+                margin-right: 30px;
+            }
+            
+            
+            .paging_number {
+                text-align: center;
+                margin-top: 80px;
+            }
+            .paging_number a {
+                width: 40px;
+                height: 40px;
+            }
             
         </style>
     </head>
@@ -209,7 +321,7 @@
         
         <div class="header">
             <a href="main.html">
-               <img class="main_logo_img" src="" alt="로고">
+               <img id="logo" src="" alt="로고">
 
             </a>
 
@@ -278,15 +390,22 @@
                 <h2>만드는 법</h2>
 
                 <ol class="recipe_process">
-                    <li>사람들이 설명을 얼마나 쓰게 될까</li>
-                    <img src="" alt="설명1사진">
+                    <li>사람들이 설명을 얼마나 쓰게 될까
+                       <img src="" alt="설명1사진">
+                    </li>
+              
 
-                    <li>흐음 이러케 저러케 만드세요</li>
-                    <img src="" alt="설명2사진">
+                    <li>흐음 이러케 저러케 만드세요
+                            <img src="" alt="설명2사진">
+            
+                    </li>
 
-                    <li>굳이 소재목 형식으로 할 필욘 없겠지</li>
-                    이렇게 하면 됩니다.
-                    <img src="" alt="설명3사진">
+                    <li>굳이 소재목 형식으로 할 필욘 없겠지
+                        <img src="" alt="설명3사진">
+                        <span>이렇게 하면 됩니다.</span>
+                        
+                    </li>
+                    
 
                 </ol>
             </div>
@@ -316,35 +435,49 @@
                
                
                <form class="new_comment_box" action="">
-                   <div>
+                   <div class="">
                         <img class="profile_img" src="" alt="댓글 프로필">
-                        별점
-                        <textarea name="" id="new_comment_content" cols="100" rows="5"></textarea>
-                        <button type="submit">올리기</button>
+                        <div class="star_rate">별점</div>
+                        <textarea name="" id="new_comment_content" ></textarea>
+                        <button type="submit"> 댓글 올리기</button>
                     </div>
                    
                 </form>
 
-                <span class="count_comment">댓글 수 n개</span>
+                <div class="count_comment">댓글 수 n개</div>
 
                 <div class="comment_list">
                     <div class="listed_content">
-                        <img class="profile_img" src="" alt="댓글 프로필">
-                        <span class="profile_name">글쓴이</span>
-                        <!-- 이름의 위치를 어디에 둘까 -->
-                        별점
-                        <span class="comment_content">글 쓴 내용</span>
+                        <div class="comment_profile">
+
+                            <img class="profile_img" src="" alt="댓글 프로필">
+                            <!-- 이름의 위치를 어디에 둘까 -->
+
+                            <div class="profile_name">글쓴이</div>
+                        </div>
+                       
+                        <div class="star_rate">별점</div>
+                        수정/삭제
+                        <span class="comment_content">글 쓴 내용Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non culpa id, illo repellat delectus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam libero earum quisquam quasi, error obcaecati quaerat eveniet beatae nihil autem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nihil totam tenetur voluptatum velit molestiae accusamus repellat delectus laborum et quas maiores facilis aperiam, amet voluptatibus ab harum odio omnis!</span>
                     </div>
 
                     <div class="listed_content">
-                        <img class="profile_img" src="" alt="댓글 프로필">
-                        <span class="profile_name">글쓴이</span>
-                        별점
-                        <span class="comment_content">글 쓴 내용</span>
+                       <div class="comment_profile">
+
+                            <img class="profile_img" src="" alt="댓글 프로필">
+                            <!-- 이름의 위치를 어디에 둘까 -->
+
+                            <div class="profile_name">글쓴이</div>
+                        </div>
+                        <div class="star_rate">별점</div>
+                        <span class="comment_content">글 쓴 내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum beatae quaerat eveniet, dignissimos praesentium iure.</sapn>
+                        <span>2020-02-19</span>
+                        <span>수정/삭제</span>
                     </div>
                 </div>
 
-                <button>더 불러오기</button>
+
+                <button class="more">더 불러오기</button>
 
             </div>
 
@@ -353,10 +486,14 @@
                 <button>글쓰기</button>
 
                 <div class="listed_content">
-                    <span class="headline">글 제목</span>
-                    <span class="profile_name">글쓴이</span>
+                   <div>
+                        <div class="headline">글 제목</div>
+                        <span class="profile_name">글쓴이</span>
+                   </div>
+                    
 
-                    <span class="content">글 내용</span>
+                    <div class="content">글 내용
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fuga temporibus unde voluptate, neque tempora laudantium magnam laboriosam enim possimus repellat molestiae vitae vel itaque cum tempore facere optio saepe commodi ad provident voluptas necessitatibus iusto. Blanditiis maxime deserunt, fugiat.</div>
                 </div>
 
                 <div class="paging_number">
@@ -381,9 +518,15 @@
 
                 <div class="listed_content">
                     <img src="" alt="요리자랑 사진">
-                    <span class="headline">글 제목</span>
-                    <span class="profile_name">글쓴이</span>
-                    <span class="content">글 내용</span>
+                    
+                    
+                       <div>
+                        <span class="headline">글 제목</span>
+                        <span class="profile_name">글쓴이</span>
+                    </div>
+                    <span class="content">글 내용
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed suscipit harum nemo aliquid alias facere fugiat quae. Animi, odio, voluptatibus?
+                    </span>
                 </div>
 
                 <div class="paging_number">
