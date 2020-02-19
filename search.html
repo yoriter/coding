@@ -1,160 +1,430 @@
 <!doctype html>
 <html>
-  <head>
+    <head>
     <title>검색결과 - 요리터</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="font/font.css">
     <style>
-      body {font-family: "NanumGothic-Regular";
+        body {
+            font-family: "NanumGothic-Regular";
         }
-      a {text-decoration: none; color: black;}
-      #logo {
-          width: 150px;
-          height: 150px;
-        } 
-      h1 {
-          font-size: 1.875rem;
+        a {
+            text-decoration: none; color: black;
         }
-      ul.menu_box,.menu_box li{
-          list-style-type: none;
-          text-align:center;
-          font-weight: bold;
-          font-size: 1.25rem;
-          border: 1px solid red;
-          
-        }    
-        ul.menu_box {width: 1000px;
-            height: 100px;}
+        #logo {
+            width: 150px;
+            height: 150px;
+            display:block;
+            padding-top: 100px;
+            margin: 0px auto;
+            border: 1px solid red;
+        }
         
-      .menu_box li{
-        display: inline;
-        }
-        li a.menu_box
-      .selected_ingredient {
-          font-size: 1.25rem;
-        }
-      .situation_icon {
-          width: 60px;
-          height: 60px;
-        }
-      h2 {
-          font-size: 1.25rem
-        }
-      h3 {
-          font-size: 1rem
-        }
-      h4 {
-          font-size: 0.875rem
-        }
-      .big_input {
-          width: 400px;
-          height: 40px;
+        .menu {
+            width: 900px;
+            line-height: 55px;
+            margin: 0 auto;
+            /*어려버...*/
+            margin-top: 60px;
+            margin-bottom: 40px;
+            background-color: lightgray;
+        }      
+        ul.menu_box,.menu_box li {
+            list-style-type: none;
+            text-align:center;
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin: 0px;
         }    
-      .small_input {
-          width: 300px;
-          height: 40px;
+        .menu_box li {
+            display: inline;
+            margin-right:60px
         }
-      button {
-        width:90px;
-        height: 45px;
+        
+        .select_option{
+            border: 1px solid hotpink;
+            height: 100px;
+            line-height: 100px;
         }
-    </style>
-  </head>
-  
-  
-  <body>
-    <a href="" id="logo"><img src="logo.jpg" alt="로고"></a>
-    <!--<nav>-->
-    <ul class="menu_box">
-      <li><a href="">요리목록</a></li>
-      <li><a href="" >인기요리</a></li>
-      <li><a href="">제철요리</a></li>
-      <li><a href="">안내사항</a></li>
-      <li><a href="">마이페이지</a></li>
-    </ul>
-    <!--</nav>-->
-    <div> 
-        <input type="text" placeholder="음식명/재료명 재검색" class="big_input">
-        <button>검색</button>
-    </div>
-    
-    
-    <h1>검색결과 창:토마토, 파스타면, 참치, 간장/-기름</h1>
-    <div class="selected_ingredient">상황</div>
-    <div><img src="situation_icon.jpg" class="situation_icon"></div>
-    
-    <div class="selected_ingredient">포함할 재료</div>
-   
-    <div>
-    <input type="text" placeholder="재료명" class="small_input">
-    <button>검색</button>
-    </div>  
-      
-    <div>토마토</div>
-    <div>파스타면</div>
-    <div>참치</div>
-    <div>간장</div>
-    
-    <div class="selected_ingredient">포함하지 않을 재료</div>
-    <div class="small_input">
-    <input type="text" placeholder="재료명" class="small_input">
-    <button>검색</button>
-    </div>  
-    <div>기름</div>
-    
-    
-    12개씩 표시
-    <select class="how_much">
-        <option value="12개">12개씩 보기</option>
-        <option value="24개">24개씩 보기</option>      
-        <option value="36개">36개씩 보기</option>
-    </select>
-    
-    <div>
-      <div>
-        <h3><a>예상외로 맛있는 맛</a></h3>
-        <div>
-           <h4>크림스프 분말, 딸기, 블루베리믹스앤견과류, 우유, 더보기</h4> 
-        </div>  
-      </div>
-    </div>
-    <h2><a>1.딸기 스프</a></h2>
-    
-    
-    <h3><a>예상외로 맛있는 맛</a></h3>
-    
-    
+        
+        .selected_situation {
+            display: inline-block;
+            width: 100px;
+            padding: auto 0;
+            border: 1px solid skyblue;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }        
+        .selected_ingredient {
+            display: inline-block;
+            width: 180px;
+            padding: auto 0;
+            border: 1px solid skyblue;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .situation_icon {
+            vertical-align: middle;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        
+        h1 {
+            font-size: 1.875rem;
+        }      
+        h2 {
+            font-size: 1.5rem;
+        }
+        h3 {
+            font-size: 1.125rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+        
+        .big_input {
+            width: 500px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            border: 1px solid orange;
+        }
+        .big_input input {
+            width: 400px;
+            height: 40px;
+            text-align: center;
+            font-size: 1rem;
+        }    
+        
+        #result {
+            display:block;
+            margin-left: 200px;
+            margin-bottom: 40px;
+            border: 1px solid green;
+        }
+        
+        .small_input {
+            display:inline-block;
+            width: auto;
+            height: 40px;
+        }
+        .small_input input {
+            width: 300px;
+            height: 40px;
+            text-align: center;
+            font-size: 1rem
+        }
+        button {
+            width:90px;
+            height: 45px;
+        }
+        
+        .name_tag {
+            border: 3px solid purple;
+            
+        }
+        .cereals_tag {
+            display: inline-block;
+            border-radius: 5px;
+            border: 3px solid darkorange;
+            background-color: darkorange;
+            color: white;
+            font-weight: bold;
+        }
+        .dairy_product_tag {
+            display: inline-block;
+            border-radius: 5px;
+            border: 3px solid cadetblue;
+            background-color: cadetblue;
+            color: white;
+            font-weight: bold;
+        }
+        .extra_tag{
+            display: inline-block;
+            border-radius: 5px;
+            border: 3px solid palevioletred;
+            background-color: palevioletred;
+            color: white;
+            font-weight: bold;
+        }
+        .fruit_tag {
+            display: inline-block;
+            border-radius: 5px;
+            border: 3px solid orangered;
+            background-color: orangered;
+            color: white;
+            font-weight: bold;
+        }
+        .flour_tag {
+            display: inline-block;
+            border-radius: 5px;
+            border: 3px solid burlywood;
+            background-color: burlywood;
+            color: white;
+            font-weight: bold;
+        }
+        .meat_tag {
+            display: inline-block;
+            border-radius: 5px;
+            border: 3px solid chocolate;
+            background-color: chocolate;
+            color: white;
+            font-weight: bold;
+        }
+        .mushroom_tag {
+            display: inline-block;
+            border-radius: 5px;
+            border: 3px solid darkgray;
+            background-color: darkgray;
+            color: white;
+            font-weight: bold;
+        }
+        .processed_food_tag {
+            display: inline-block;
+            border-radius: 5px;
+            border: 3px solid mediumpurple;
+            background-color: mediumpurple;
+            color: white;
+            font-weight: bold;
+        }
+        .rice_tag{
+            display: inline-block;
+            border-radius: 5px;
+            border: 3px solid skyblue;
+            background-color: skyblue;
+            color: white;
+            font-weight: bold;
+        }
+        .seafood_tag {
+            display: inline-block;
+            border-radius: 5px;
+            border: 3px solid cornflowerblue;
+            background-color: cornflowerblue;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .select_ingredient_name {
+            width: 500px;
+            margin-left: 200px;
+        }
+        
+        .how_much_location {
+            width: 1300px;
+            border: 1px solid hotpink;
+            text-align: right;
+        }
+        .how_much {
+            display: inline-block;
+            width: 150px;
+            height: 40px;
+            font-size: 1rem;
+        }
+        
+        .food_list {
+            width: 1300px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+            border: 5px solid skyblue;
+        }
+        .food_information {
+            width: 250px;
+            height: 480px;
+            margin: 30px;
+            display: inline-block;
+            text-align: center;
+            border: 1px solid purple;
+        }
+        .big_information {
+            width: 230px;
+            height: 330px;
+            display: inline-block;
+            border: 1px solid pink;
+            text-align: center;
+        }
+        .food_img {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            border: 1px solid red;
+        }
+        
+        html, body {
+            height: 100%;
+            background-color: lightgray; 
+        }        
+        .position_mid {
+            float: none;
+            background-color: white;
+            width: 1400px;
+            height: auto;
+            margin: 0 auto;
+        }
+        body {
+            margin: 0
+        }
 
+    </style>
+    </head>
+  
+  
+    <body>
+        <div class="position_mid">
+            <a href=""><img src="situation_icon.jpg" alt="로고" id="logo"></a>
+        <div class="menu">
+            <ul class="menu_box">
+                <li><a href="">요리목록</a></li>
+                <li><a href="">인기요리</a></li>
+                <li><a href="">제철요리</a></li>
+                <li><a href="">안내사항</a></li>
+                <li><a href="">마이페이지</a></li>
+            </ul>
+        </div>
+        <div class="big_input"> 
+            <input type="text" placeholder="음식명/재료명 재검색">
+            <button>검색</button>
+        </div>
     
+        <div id="result">
+            <h1>검색결과 창:토마토, 파스타면, 참치, 간장/-기름</h1>
     
-    <h2><a>2.딸기 스프</a></h2>
+            <div class="select_option">
+                <div class="selected_situation">상황</div>
+                <img src="situation_icon.jpg"         class="situation_icon">
+                <img src="situation_icon.jpg"         class="situation_icon">
+                <img src="situation_icon.jpg"         class="situation_icon">
+                <img src="situation_icon.jpg"         class="situation_icon">
+                <img src="situation_icon.jpg"         class="situation_icon">
+                <img src="situation_icon.jpg"         class="situation_icon">
+                <img src="situation_icon.jpg"         class="situation_icon">
+            </div>
+       
+            <div class="select_option">   
+                <div class="selected_ingredient">포함할 재료
+                </div>
+                <div class="small_input">
+                    <input type="text" placeholder="재료명">
+                    <button>검색</button>
+                </div>  
+            </div>
+
+            <div class="select_ingredient_name">
+                <div class=name_tag>
+                    <div class="fruit_tag">토마토</div>
+                    <div class="flour_tag">파스타면</div>
+                    <div class="seafood_tag">참치</div>
+                    <div class="extra_tag">간장</div>
+                </div>
+            </div>
+            
+            
+            <div class="select_option">
+                <div class="selected_ingredient">포함하지 않을 재료</div>
+                <div class="small_input">
+                    <input type="text" placeholder="재료명">
+                    <button>검색</button>
+                </div>  
+            </div>
+            <div class="select_ingredient_name">
+                <div class=name_tag>
+                    <div class="extra_tag">기름</div>
+                </div>  
+            </div>  
+        </div>
+        
+        <div class="how_much_location">
+            <select class="how_much">
+                <option value="12개">12개씩 보기</option>
+                <option value="24개">24개씩 보기</option>      
+                <option value="36개">36개씩 보기</option>
+            </select>
+        </div>
     
-    
-    <h3><a>예상외로 맛있는 맛</a></h3>
-    
-    
-    <h4>크림스프 분말, 딸기, 블루베리믹스앤견과류, 우유, 더보기</h4>    
-    
-    
-    
-    <h2><a>3.딸기 스프</a></h2>
-    
-    
-    <h3><a>예상외로 맛있는 맛</a></h3>
-    
-    
-    <h4>크림스프 분말, 딸기, 블루베리믹스앤견과류, 우유, 더보기</h4>    
-    
-    
-    
-    <h2><a>4.딸기 스프</a></h2>
-    
-    
-    <h3><a>예상외로 맛있는 맛</a></h3>
-    
-    
-    <h4>크림스프 분말, 딸기, 블루베리믹스앤견과류, 우유, 더보기</h4>       
-    
-    페이징
-  </body>
+        <div class="food_list">
+            <div class="food_information">
+                <div class="big_information"><a href="">
+                    <img src="음식 이미지" alt="음식이미지" class="food_img">
+                    <h2>토마토 파스타</h2>
+                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
+                </div>
+                    <h4><div class="fruit_tag">토마토</div>
+                        <div class="flour_tag">파스타면</div></h4> 
+                </div>
+            
+            <div class="food_information">
+                <div class="big_information"><a href="">
+                    <img src="음식 이미지" alt="음식이미지" class="food_img">
+                    <h2>토마토 파스타</h2>
+                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
+                </div>
+                    <h4><div class="fruit_tag">토마토</div>
+                        <div class="flour_tag">파스타면</div></h4> 
+                </div>
+                
+            <div class="food_information">
+                <div class="big_information"><a href="">
+                    <img src="음식 이미지" alt="음식이미지" class="food_img">
+                    <h2>토마토 파스타</h2>
+                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
+                </div>
+                    <h4><div class="fruit_tag">토마토</div>
+                        <div class="flour_tag">파스타면</div></h4> 
+                </div>
+                
+            <div class="food_information">
+                <div class="big_information"><a href="">
+                    <img src="음식 이미지" alt="음식이미지" class="food_img">
+                    <h2>토마토 파스타</h2>
+                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
+                </div>
+                    <h4><div class="fruit_tag">토마토</div>
+                        <div class="flour_tag">파스타면</div></h4> 
+                </div>
+                
+            <div class="food_information">
+                <div class="big_information"><a href="">
+                    <img src="음식 이미지" alt="음식이미지" class="food_img">
+                    <h2>토마토 파스타</h2>
+                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
+                </div>
+                    <h4><div class="fruit_tag">토마토</div>
+                        <div class="flour_tag">파스타면</div></h4> 
+                </div>
+            
+            <div class="food_information">
+                <div class="big_information"><a href="">
+                    <img src="음식 이미지" alt="음식이미지" class="food_img">
+                    <h2>토마토 파스타</h2>
+                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
+                </div>
+                    <h4><div class="fruit_tag">토마토</div>
+                        <div class="flour_tag">파스타면</div></h4> 
+                </div>
+                
+            <div class="food_information">
+                <div class="big_information"><a href="">
+                    <img src="음식 이미지" alt="음식이미지" class="food_img">
+                    <h2>토마토 파스타</h2>
+                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
+                </div>
+                    <h4><div class="fruit_tag">토마토</div>
+                        <div class="flour_tag">파스타면</div></h4> 
+                </div>
+                
+            <div class="food_information">
+                <div class="big_information"><a href="">
+                    <img src="음식 이미지" alt="음식이미지" class="food_img">
+                    <h2>토마토 파스타</h2>
+                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
+                </div>
+                    <h4><div class="fruit_tag">토마토</div>
+                        <div class="flour_tag">파스타면</div></h4> 
+                </div>
+            </div>
+        </div>
+
+    </body>
 </html>
