@@ -7,7 +7,7 @@
         <style>
             
 /*            16px 빨강색*/
-            .count_comment {
+            .count_comment, img {
                 font-size: 1rem;
                 color: red;
             }
@@ -29,7 +29,7 @@
             }
             
 /*            24px 보라색*/
-            .recipe_process li {
+            .recipe_process li, h2 {
                 font-size: 1.5rem;
                 color: violet;
             }
@@ -38,6 +38,10 @@
             h1 {
                 font-size: 1.875rem;
                 color: aqua;
+            }
+            
+            a {
+                text-decoration:none;
             }
             
             html {
@@ -396,11 +400,8 @@
                 <li>요리팁 공유해요</li>
                 <li>나도 만들었어요</li>
             </ul>
-        
-            <!-- 복수 명사로 쓰는 게 나을까? -->
-            <div class="tap" id="comment">
-               
-               
+                    
+            <div class="tap" id="comment">               
                <form class="new_comment_box" action="">
                    <div class="">
                         <img class="profile_img" src="" alt="댓글 프로필">
@@ -409,17 +410,13 @@
                         <button type="submit"> 댓글 올리기</button>
                     </div>
                 </form>
-
                 <div class="count_comment">댓글 수 n개</div>
-
                 <div class="comment_list">
                     <div class="listed_content">
                         <div class="comment_profile">
                             <img class="profile_img" src="" alt="댓글 프로필">
-                            <!-- 이름의 위치를 어디에 둘까 -->
                             <div class="profile_name">글쓴이</div>
                         </div>
-                       
                         <div class="star_rate">별점</div>
                         수정/삭제
                         <span class="comment_content">글 쓴 내용Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non culpa id, illo repellat delectus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam libero earum quisquam quasi, error obcaecati quaerat eveniet beatae nihil autem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nihil totam tenetur voluptatum velit molestiae accusamus repellat delectus laborum et quas maiores facilis aperiam, amet voluptatibus ab harum odio omnis!</span>
@@ -429,9 +426,7 @@
                     <div class="listed_content">
                        <div class="comment_profile">
 
-                            <img class="profile_img" src="" alt="댓글 프로필">
-                            <!-- 이름의 위치를 어디에 둘까 -->
-     
+                            <img class="profile_img" src="" alt="댓글 프로필">     
                             <div class="profile_name">글쓴이</div>
                         </div>
                         <div class="star_rate">별점</div>
@@ -441,7 +436,6 @@
                     </div>
                 </div>
                 <button class="more">더 불러오기</button>
-
             </div>
 
             <div class="tap" id="tip">
@@ -510,7 +504,7 @@
             </div>
         </div>
     
-<!-- 관련 글이 연결되어도 좋을듯. -->
+<!-- 관련 글이 연결 -->
     </body>
     
 </html>

@@ -1,0 +1,92 @@
+## 스토리 보드
+
+[https://m.blog.naver.com/PostView.nhn?blogId=dailytopic&logNo=220954218520&proxyReferer=https%3A%2F%2Fwww.google.com%2F](https://m.blog.naver.com/PostView.nhn?blogId=dailytopic&logNo=220954218520&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
+
+## 포트폴리오
+
+[https://www.freemoa.net/](https://www.freemoa.net/)
+
+[https://stuffandnonsense.co.uk/design](https://stuffandnonsense.co.uk/design)
+
+## Git 개념
+
+[https://backlog.com/git-tutorial/kr/](https://backlog.com/git-tutorial/kr/)
+
+[https://blog.naver.com/szlovelygirl/221739526700](https://blog.naver.com/szlovelygirl/221739526700)
+
+git 사용법..
+
+1. 파일 내용변경
+2. commit 으로 내가 바꾼거에 대해 설명달기
+3. push 를 눌러서 원격 저장소에 올리기
+4. 원격저장소에 갱신된 내용을 불러오려면 pull 누르기(fetch를 눌러도 되는지도)
+
+## heading tag넣기
+
+.[https://onlyian.tistory.com/13](https://onlyian.tistory.com/13)
+
+[https://yanus.tistory.com/5](https://yanus.tistory.com/5)
+
+[https://havefunfun.tistory.com/40](https://havefunfun.tistory.com/40)
+
+[https://lifea.co.kr/제목-디자인/](https://lifea.co.kr/%EC%A0%9C%EB%AA%A9-%EB%94%94%EC%9E%90%EC%9D%B8/) 
+
+## list태그, float매뉴
+
+[https://rgy0409.tistory.com/2887](https://rgy0409.tistory.com/2887)
+
+[https://rgy0409.tistory.com/2887](https://rgy0409.tistory.com/2887)
+
+요즘엔 float보다 inline태그를 쓴다 / [https://blog.outsider.ne.kr/111](https://blog.outsider.ne.kr/111)
+
+다양한 방법으로 가로가 긴 매뉴바 만들기 / [https://webclub.tistory.com/533](https://webclub.tistory.com/533)
+
+inline으로 매뉴바 만들기/ [http://jsfiddle.net/hj2y8hne/2/](http://jsfiddle.net/hj2y8hne/2/)
+
+레이아웃 지식[https://ko.learnlayout.com/](https://ko.learnlayout.com/)
+
+## float를 쓰다가 태그의 크기가 생각처럼 안될 때
+
+[https://tonhnegod.tistory.com/5](https://tonhnegod.tistory.com/5)
+
+## CSS 선택자
+
+[https://tonhnegod.tistory.com/30?category=723813](https://tonhnegod.tistory.com/30?category=723813) 
+
+> CSS선택자 30가지를 소개한 글. 유용해보이지만 지금은 이해가 안된다. 더 나은 선택자는 없을까 고민할 때쯤 한번 보도록 하자. '가상 선택자' 라는 것도 있는데 뭘까....
+
+## 구글 웹폰트 적용하는 두 가지 방법
+
+[https://www.youtube.com/watch?v=RBi5E_GmMwc](https://www.youtube.com/watch?v=RBi5E_GmMwc)
+
+## 좋은 코드 설명해주는 곳
+
+짝코딩
+
+코드리뷰
+
+?!
+
+## 코드리뷰에 대하여
+
+[https://huni.org/클린-코드를-위한-코드-리뷰-4687714dc830](https://huni.org/%ED%81%B4%EB%A6%B0-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0-4687714dc830)
+
+[https://blog.logi-spot.com/코드리뷰의-진짜-목적은-따로있다/](https://blog.logi-spot.com/%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0%EC%9D%98-%EC%A7%84%EC%A7%9C-%EB%AA%A9%EC%A0%81%EC%9D%80-%EB%94%B0%EB%A1%9C%EC%9E%88%EB%8B%A4/)
+
+[https://wayhome25.github.io/git/2017/07/08/git-first-pull-request-story/](https://wayhome25.github.io/git/2017/07/08/git-first-pull-request-story/)
+
+ㄴ 뭔지 모르겠듬 아직...
+
+## Git 커밋 메시지 작성
+
+[https://edykim.com/ko/post/about-commit-messages/](https://edykim.com/ko/post/about-commit-messages/) (익숙한 주인장의 이름..* ㅋㅋㅋㅋㅋㅋㅋㅋ 겁나 웃김.. 용..용균아!!)
+
+[https://tech.ssut.me/write-a-good-git-commit-message/](https://tech.ssut.me/write-a-good-git-commit-message/)
+
+[https://tttsss77.tistory.com/58](https://tttsss77.tistory.com/58)
+
+ㄴ 고오급 기술을 배워서 코드리뷰를 하는 히진이........
+
+나..나는.... 
+
+아냐... 이건.... 코드리뷰와 관계없어.......... 커밋 메시지만을 위한 거야 하하하하 (코드리뷰 알아보다가 딴길로 새며 알아본 정보...)
