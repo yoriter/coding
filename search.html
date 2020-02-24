@@ -4,10 +4,24 @@
     <title>검색결과 - 요리터</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="font/font.css">
+    <link rel="stylesheet" href="ingredient.css">
     <style>
         body {
             font-family: "NanumGothic-Regular";
+            margin: 0
         }
+        html, body {
+            height: 100%;
+            background-color: lightgray; 
+        }        
+        .position_mid {
+            float: none;
+            background-color: white;
+            width: 1400px;
+            height: auto;
+            margin: 0 auto;
+        }
+
         a {
             text-decoration: none; color: black;
         }
@@ -29,7 +43,7 @@
             margin-bottom: 40px;
             background-color: lightgray;
         }      
-        ul.menu_box,.menu_box li {
+        ul.menu_box {
             list-style-type: none;
             text-align:center;
             font-weight: bold;
@@ -106,7 +120,6 @@
         
         .small_input {
             display:inline-block;
-            width: auto;
             height: 40px;
         }
         .small_input input {
@@ -120,94 +133,10 @@
             height: 45px;
         }
         
-        .name_tag {
-            border: 3px solid purple;
-            
-        }
-        .cereals_tag {
-            display: inline-block;
-            border-radius: 5px;
-            border: 3px solid darkorange;
-            background-color: darkorange;
-            color: white;
-            font-weight: bold;
-        }
-        .dairy_product_tag {
-            display: inline-block;
-            border-radius: 5px;
-            border: 3px solid cadetblue;
-            background-color: cadetblue;
-            color: white;
-            font-weight: bold;
-        }
-        .extra_tag{
-            display: inline-block;
-            border-radius: 5px;
-            border: 3px solid palevioletred;
-            background-color: palevioletred;
-            color: white;
-            font-weight: bold;
-        }
-        .fruit_tag {
-            display: inline-block;
-            border-radius: 5px;
-            border: 3px solid orangered;
-            background-color: orangered;
-            color: white;
-            font-weight: bold;
-        }
-        .flour_tag {
-            display: inline-block;
-            border-radius: 5px;
-            border: 3px solid burlywood;
-            background-color: burlywood;
-            color: white;
-            font-weight: bold;
-        }
-        .meat_tag {
-            display: inline-block;
-            border-radius: 5px;
-            border: 3px solid chocolate;
-            background-color: chocolate;
-            color: white;
-            font-weight: bold;
-        }
-        .mushroom_tag {
-            display: inline-block;
-            border-radius: 5px;
-            border: 3px solid darkgray;
-            background-color: darkgray;
-            color: white;
-            font-weight: bold;
-        }
-        .processed_food_tag {
-            display: inline-block;
-            border-radius: 5px;
-            border: 3px solid mediumpurple;
-            background-color: mediumpurple;
-            color: white;
-            font-weight: bold;
-        }
-        .rice_tag{
-            display: inline-block;
-            border-radius: 5px;
-            border: 3px solid skyblue;
-            background-color: skyblue;
-            color: white;
-            font-weight: bold;
-        }
-        .seafood_tag {
-            display: inline-block;
-            border-radius: 5px;
-            border: 3px solid cornflowerblue;
-            background-color: cornflowerblue;
-            color: white;
-            font-weight: bold;
-        }
-        
         .select_ingredient_name {
             width: 500px;
             margin-left: 200px;
+            border: 3px solid purple; 
         }
         
         .how_much_location {
@@ -252,20 +181,6 @@
             border: 1px solid red;
         }
         
-        html, body {
-            height: 100%;
-            background-color: lightgray; 
-        }        
-        .position_mid {
-            float: none;
-            background-color: white;
-            width: 1400px;
-            height: auto;
-            margin: 0 auto;
-        }
-        body {
-            margin: 0
-        }
 
     </style>
     </head>
@@ -312,12 +227,10 @@
             </div>
 
             <div class="select_ingredient_name">
-                <div class=name_tag>
                     <div class="fruit_tag">토마토</div>
                     <div class="flour_tag">파스타면</div>
                     <div class="seafood_tag">참치</div>
                     <div class="extra_tag">간장</div>
-                </div>
             </div>
             
             
