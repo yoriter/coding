@@ -6,8 +6,8 @@
         
         <style>
             
-/*            16px 빨강색*/
-            .count_comment, img {
+/*            16px 빨강색 css 지정이 점점 구체적으로 들어가는 식이 아니라서 효율적이지 않은지도.*/
+            .count_comment, img, input, .paging_number {
                 font-size: 1rem;
                 color: red;
             }
@@ -25,7 +25,6 @@
             .menu_box li, .epilog li, .tap .headline, .ingredient h3 {
                 font-size: 1.25rem;
                 color: green;
-                margin-right: 40px;
             }
             
 /*            24px 보라색*/
@@ -52,7 +51,7 @@
                 body {
                     margin-right: auto;
                     margin-left:auto;
-                    max-width: 1200px;
+                    max-width: 1400px;
 
                     background-color: pink;
                     /* 뭐지 얘는 */
@@ -102,24 +101,21 @@
             
 /*            창이 작아 졌을 때 조절 필요         */
             .menu_box {
-/*                width: 700px;                */
-                padding-top: 20px;
-                padding-bottom:20px;
+                max-width: 900px;
+                line-height: 55px;
                 background-color: lightgray;
                 
-/*
-                margin-left: 100px;
-                margin-right: 100px;
-*/
-                margin-top: 60px;
-                display: inline-block;
-                padding-inline-end:40px;
+                list-style-type: none;
+                margin: 60px auto;
+                display: block;
+                
+                padding-inline-start:0;
             }
             
             .menu_box li, .epilog li {
                 display:inline-block;
-                margin-left: 20px;
-                margin-right: 20px;
+                margin-left: 30px;
+                margin-right: 30px;
                 font-weight: bold;
             }
             
@@ -142,6 +138,8 @@
             .ingredient {
                 background-color: aliceblue;
                 
+                max-width: 800px;
+                
                 padding-left: 90px;
                 padding-right: 90px;
 
@@ -156,6 +154,9 @@
             
             .recipe_process {
                 padding-left: 150px;
+                max-width: 900px;
+                margin: 0 auto;
+                overflow: hidden;
             }
             
             .recipe_process li {
@@ -180,16 +181,18 @@
             }
             
             .module {
-                margin-top: 130px;
-                margin-bottom: 130px;
+                margin: 130px auto;
             }
             
             .epilog {
 /*                width: 1080px;*/
 /*                border: red 1px solid;*/
-                margin: auto;
+                margin: 40px;
             }
             
+            .epilog h2 {
+                padding-left: 60px;
+            }
             .epilog ul li {
                 width: 180px;
                 height: 60px;
@@ -346,7 +349,6 @@
                         <li>딸기</li>
                         <li>배추</li>
                     </ul>
-
                     <h3>양념</h3>
                     <table>
                         <tr>
