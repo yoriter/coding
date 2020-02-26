@@ -1,42 +1,45 @@
 <html>
     <head>
+       
+        <meta charset="utf-8">
         <title>
             쓸쓸하랴 얼음에 - 요리터
         </title>
+        
+        
+        <link rel="stylesheet" href="font/font.css">
+        
         
         <style>
             
 /*            16px 빨강색 css 지정이 점점 구체적으로 들어가는 식이 아니라서 효율적이지 않은지도.*/
             .count_comment, img, input, .paging_number {
                 font-size: 1rem;
-                color: red;
-            }
-            .count_comment {
-                clear: both;
+/*                color: red;*/
             }
             
 /*            18px 파랑색 기본 글씨 크기를 18로 봐도 무방할 것 같다. 나머지를 예외로 하고.*/
             button, .ingredient, .profile_name, .comment_content, .tap .content, li span {
                 font-size: 1.125rem;
-                color: blue;
+/*                color: blue;*/
             }
             
 /*            20px 초록색*/
             .menu_box li, .epilog li, .tap .headline, .ingredient h3 {
                 font-size: 1.25rem;
-                color: green;
+/*                color: green;*/
             }
             
 /*            24px 보라색*/
             .recipe_process li, h2 {
                 font-size: 1.5rem;
-                color: violet;
+/*                color: violet;*/
             }
             
 /*            30px*/
             h1 {
                 font-size: 1.875rem;
-                color: aqua;
+/*                color: aqua;*/
             }
             
             a {
@@ -61,7 +64,9 @@
             body {
                 background-color: white;
                 margin-top: 0;
-                padding-bottom: 300px
+                padding-bottom: 300px;
+                font-family: "NanumGothic-Regular", "NanumGothic";
+                
             }
             
             h2 {
@@ -191,11 +196,11 @@
             }
             
             .epilog h2 {
-                padding-left: 60px;
+                padding-left: 70px;
             }
             .epilog ul li {
                 width: 180px;
-                height: 60px;
+                line-height: 60px;
             }
             
             .tap {
@@ -264,6 +269,10 @@
                 float:right;
                 color: red;
                 margin: 20px;
+            }
+            
+            .count_comment {
+                clear: both;
             }
             
             .listed_content .profile_name {
