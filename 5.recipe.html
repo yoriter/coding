@@ -5,14 +5,11 @@
         <title>
             쓸쓸하랴 얼음에 - 요리터
         </title>
-        
-        
         <link rel="stylesheet" href="font/font.css">
-        
         
         <style>
             
-/*            16px 빨강색 css 지정이 점점 구체적으로 들어가는 식이 아니라서 효율적이지 않은지도.*/
+/*            16px 빨강색 css 지정이 점점 구체적으로 들어가는 식이 아니라서 효율적이지 않은지도. 한번에 고치기에는 더 나으려나?*/
             .count_comment, img, input, .paging_number {
                 font-size: 1rem;
 /*                color: red;*/
@@ -158,8 +155,8 @@
                 border: 1px gray solid;
             }
             
-            .recipe_process {
-                padding-left: 150px;
+            ol.recipe_process {
+                max-width: 900px;
                 max-width: 900px;
                 margin: 0 auto;
                 overflow: hidden;
@@ -168,14 +165,14 @@
             .recipe_process li {
                 text-align: left;
                 clear: both;           
-/*                overflow: hidden;*/
-                margin-bottom: 60px;
+                margin: 0 auto 60px;
             }
         
             .recipe_process img {
                 width: 360px;
                 height: 240px;
                 
+                margin: ;
                 margin-bottom: 60px;
                 
                 float:right;        
@@ -417,7 +414,7 @@
                <form class="new_comment_box" action="">
                    <div class="">
                         <img class="profile_img" src="" alt="댓글 프로필">
-                        <div class="star_rate">별점</div>
+                        <div class="star_rate">☆☆☆☆☆</div>
                         <textarea name="" id="new_comment_content" ></textarea>
                         <button type="submit"> 댓글 올리기</button>
                     </div>
@@ -429,7 +426,7 @@
                             <img class="profile_img" src="" alt="댓글 프로필">
                             <div class="profile_name">글쓴이</div>
                         </div>
-                        <div class="star_rate">별점</div>
+                        <div class="star_rate">★★★★★</div>
                         수정/삭제
                         <span class="comment_content">글 쓴 내용Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non culpa id, illo repellat delectus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam libero earum quisquam quasi, error obcaecati quaerat eveniet beatae nihil autem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nihil totam tenetur voluptatum velit molestiae accusamus repellat delectus laborum et quas maiores facilis aperiam, amet voluptatibus ab harum odio omnis!</span>
                     </div>
@@ -441,7 +438,7 @@
                             <img class="profile_img" src="" alt="댓글 프로필">     
                             <div class="profile_name">글쓴이</div>
                         </div>
-                        <div class="star_rate">별점</div>
+                        <div class="star_rate">★★★★★</div>
                         <span class="comment_content">글 쓴 내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum beatae quaerat eveniet, dignissimos praesentium iure.</sapn>
                         <span>2020-02-19</span>
                         <span>수정/삭제</span>
