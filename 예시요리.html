@@ -1,0 +1,577 @@
+<!--2020-02-28 만듬-->
+   
+
+<html>
+    <head>
+       
+        <meta charset="utf-8">
+        <title>
+            쓸쓸하랴 얼음에 - 요리터
+        </title>
+        <link rel="stylesheet" href="font/font.css">
+        
+        <style>
+            
+/*            16px 빨강색 css 지정이 점점 구체적으로 들어가는 식이 아니라서 효율적이지 않은지도. 한번에 고치기에는 더 나으려나?*/
+            .count_comment, img, input, .paging_number {
+                font-size: 1rem;
+/*                color: red;*/
+            }
+            
+/*            18px 파랑색 기본 글씨 크기를 18로 봐도 무방할 것 같다. 나머지를 예외로 하고.*/
+            button, .ingredient, .profile_name, .comment_content, .tap .content, li span {
+                font-size: 1.125rem;
+/*                color: blue;*/
+            }
+            
+/*            20px 초록색*/
+            .menu_box li, .epilog li, .tap .headline, .ingredient h3 {
+                font-size: 1.25rem;
+/*                color: green;*/
+            }
+            
+/*            24px 보라색*/
+            .recipe_process li, h2 {
+                font-size: 1.5rem;
+/*                color: violet;*/
+            }
+            
+/*            30px*/
+            h1 {
+                font-size: 1.875rem;
+/*                color: aqua;*/
+            }
+            
+            a {
+                text-decoration:none;
+            }
+            
+            html {
+                background-color: lightgray;
+            }
+            
+            body {
+                background-color: white;
+                margin-top: 0;
+                padding-bottom: 300px;
+                font-family: "NanumGothic-Regular", "NanumGothic";
+                line-height:2rem;
+
+                
+            }
+            
+            @media (min-width: 800px) {
+                body {
+                    margin-right: auto;
+                    margin-left:auto;
+                    max-width: 1400px;
+                    
+                }
+            }
+            
+            h2 {
+                margin-bottom: 60px;
+            }
+            
+            button {
+/*                width: 80px;*/
+                height: 40px;
+                min-width: 80px;
+            }
+                    
+            .scrap_n_share {
+                padding-top: 60px;
+            }
+
+            .header {
+                text-align: center;
+            }
+            
+            #logo {
+                width: 150px;
+                height: 150px;
+                padding-top: 100px;
+                margin-bottom: 60px;
+            }
+            
+            .header_search {
+                margin-top: 20px;
+            }
+            
+            #main_q {
+                width: 300px;
+                height: 40px;
+                padding-left: 15px;
+            }
+            
+            
+/*            창이 작아 졌을 때 조절 필요         */
+            .menu_box {
+                max-width: 900px;
+                line-height: 55px;
+                background-color: lightgray;
+                
+                list-style-type: none;
+                margin: 0 auto 60px;
+                display: block;
+                
+                padding-inline-start:0;
+            }
+            
+            .menu_box li, .epilog li {
+                display:inline-block;
+                margin-left: 30px;
+                margin-right: 30px;
+                font-weight: bold;
+            }
+            
+            .recipe_content {
+                margin: 40px;
+                text-align: center;
+            }
+            
+            .recipe_content .main_img {
+                width: 500px;
+                height: 300px;
+                margin: 40px;
+            }
+            
+            .profile_img {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .ingredient {
+                background-color: aliceblue;
+                display: inline-block;
+                
+                padding: 20px;
+
+                margin: 0 auto;
+                
+                column-count: 2;
+                column-width: 400px;
+                column-rule-style: dotted;
+                column-rule-width: 3px;
+                column-rule-color: aquamarine;
+            }
+            
+            .ingredient_box {
+
+                height: 200px;
+                display: block;
+                margin: auto 0;
+                padding: 0 60px;
+
+            }
+            .ingredient_box h3 {
+                margin: 0;
+                padding: 10px 0 30px;
+                        
+            }
+            
+            .ingredient_box ul {
+                margin: 0;
+            }
+            
+            .ingredient table, .ingredient th {
+                text-align: left;
+                border: 1px gray solid;
+            }
+            
+            ol.recipe_process {
+                max-width: 900px;
+                max-width: 900px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            
+            .recipe_process li {
+                text-align: left;
+                margin: 0 auto 60px;
+            }
+            
+            .recipe_process > div{
+                clear: both;           
+
+            }
+        
+            .recipe_process img {
+                width: 360px;
+                height: 240px;
+                
+                margin: 0 0 60px 50px;
+                
+                float:right;        
+            }
+            
+            .recipe_content + .scrap_n_share {
+                clear: both;
+                text-align: center;
+            }
+            
+            .module {
+                margin: 130px auto;
+            }
+            
+            .epilog {
+/*                width: 1080px;*/
+/*                border: red 1px solid;*/
+                margin: 40px;
+            }
+            
+            .epilog h2 {
+                padding-left: 70px;
+            }
+            .epilog ul li {
+                width: 180px;
+                line-height: 60px;
+            }
+            
+            .tap {
+                margin: 0px 10px 40px;
+                padding: 12px;
+                padding-top: 20px;
+                padding-bottom: 30px;
+                background-color: floralwhite;
+
+            }
+            
+            .tap #comment {
+                height: 700px;
+            }
+            
+            .new_comment_box .profile_img {
+                float:left;
+                margin: 20px;
+            }
+
+            textarea {
+                display: block;
+                width: 70%;
+                height: 60px;
+                float:left;
+            }
+            
+            .listed_content {
+                padding:30px;
+                padding-bottom: 30px;
+/*                display: inline-block;*/
+                overflow: hidden;
+/*                clear: both;*/
+            }
+            
+            .tap .headline {
+                display: inline;
+                font-weight: bold
+            }
+            
+            .tap button{
+/*                text-align: right;*/
+                display: block;
+                margin-left : auto;
+                margin-right: 0;
+            }
+            
+            .comment_profile {
+                clear:both;
+                float:left;
+                margin-right: 30px;
+            }
+            
+            #comment button.more {
+                clear: both;
+                color: red;
+                margin: auto;
+                display: block;
+            }
+            
+            .comment_content {
+                float:left;
+                width: 80%;
+            }
+            
+            #comment .new_comment_box button {
+                float:right;
+                color: red;
+                margin: 20px;
+            }
+            
+            .count_comment {
+                clear: both;
+            }
+            
+            .listed_content .profile_name {
+                padding: 3px;
+                margin: auto;
+            }
+            
+            .content {
+                clear:both;
+            }
+            
+            #mine_picture .listed_content, #tip .listed_content{
+                height: 100px;
+                margin-bottom: 60px;
+            }
+            
+            #mine_picture img {
+                width: 150px;
+                height: 100px;
+                float: left;
+                margin-right: 30px;
+            }
+            
+            .paging_number {
+                text-align: center;
+                margin-top: 80px;
+            }
+            
+            .paging_number a {
+                width: 40px;
+                height: 40px;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="header">
+            <a href="main.html">
+               <img id="logo" src="" alt="로고">
+            </a>
+
+            <form class="header_search">
+<!--                <label for="main_q">음식명/재료명 검색</label>-->
+                <input type="text" id="main_q" placeholder="음식명/재료명 검색" name="">
+                <button type="submit">검색하기</button>
+            </form>
+
+            <ul class=menu_box>
+                <li>요리목록</li>
+                <li>인기요리</li>
+                <li>제철요리</li>
+                <li>안내사항</li>
+                <li>마이페이지</li>  
+            </ul>
+        </div>
+        
+        <div class="recipe_content">
+        
+            <div class="scrap_n_share">
+                <button>스크랩</button>
+                <button>공유</button>
+                
+<!--                공유박스 추가-->
+            </div>
+        
+            <img class="main_img" src="/img/%EA%B9%80%EC%B9%98%EC%8C%88%EB%B0%A5.png" alt="메인사진">
+
+            <h1>김치쌈밥</h1>
+            
+            <a href="사용자 페이지">
+                <img class="profile_img" src="" alt="글쓴이 프로필">
+                <div class="profile_name">82Cook</div>
+            </a>
+            
+            <div class="module">
+               
+                <h2>요리 재료</h2>
+                <div class="ingredient">
+                    <div class="ingredient_box">
+                        <h3>재료</h3>
+                        <ul>
+                            <li>신김치 잎(10X10㎝ 정도) 5~6장</li>
+                            <li>밥 한공기</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ingredient_box">
+                        <h3>양념</h3>
+                        <table>
+                            <tr>
+                                <th>김치양념 : </th>
+                                <th>참기름 ½작은술, 설탕 ½작은술</th>
+                            </tr>
+                            <tr>
+                                <th>밥 양념 : </th>
+                                <th>참기름 1작은술, 설탕 ½작은술, 소금 약간</th>
+                            </tr>
+                        </table>  
+                    </div>
+                    
+
+                </div>
+            </div>
+            
+            <div class="module">
+                <h2>만드는 법</h2>
+
+                <ol class="recipe_process">
+                   
+                    <div class="clearing">
+                        <img src="" alt="설명1사진">
+
+                        <li>김치의 잎부분만 잘라서 양념을 물에 헹군 후 물기를 꼭 짜두세요. 물에 담가두면 싱거워지니 양념만 헹궈요. 
+                        </li>
+                    </div>
+                    
+                  <div class="clearing">
+
+                       <img src="" alt="설명2사진">
+
+                        <li>김치 잎에 소량의 참기름과 설탕으로 간을 해요.
+                        </li>
+                    
+                    </div>
+
+                    <div class="clearing">
+               
+                       <img src="" alt="설명3사진">
+
+                        <li>밥은 그냥 먹어도 간이 좋을 정도로 참기름, 설탕, 소금으로 양념해요.
+                            <p>이렇게 하면 됩니다. 호롤ㄹ로로로로ㅗㄹ 줄간격을 위해 일단 추가해보는 테스트 내용들입니다. 마시께 먹으세여 </p>     
+                        </li>
+                    </div>
+                    <div class="clearing">
+                        <img src="" alt="설명4사진">
+
+                        <li>
+                            김치 잎을 펴고 밥을 초밥 크기로 올리고 김치 양옆을 접은 후 돌돌 말아요.
+                        </li>
+                    </div>
+
+                </ol>
+            </div>
+        </div>
+
+        <div class="scrap_n_share">
+
+            <button>스크랩</button>
+            <button>공유</button>
+        </div>
+
+        <div class="epilog">
+            <h2>후기</h2>
+
+            <ul>
+                <li>얼마나 맛있었나요?</li>
+                <li>요리팁 공유해요</li>
+                <li>나도 만들었어요</li>
+            </ul>
+                    
+            <div class="tap" id="comment">               
+               <form class="new_comment_box" action="">
+                   <div class="">
+                        <img class="profile_img" src="" alt="댓글 프로필">
+                        <div class="star_rate">☆☆☆☆☆</div>
+                        <textarea name="" id="new_comment_content" ></textarea>
+                        <button type="submit"> 댓글 올리기</button>
+                    </div>
+                </form>
+                <div class="count_comment">댓글 수 n개</div>
+                <div class="comment_list">
+                    <div class="listed_content">
+                        <div class="comment_profile">
+                            <img class="profile_img" src="" alt="댓글 프로필">
+                            <div class="profile_name">아주아주칭찬해</div>
+                        </div>
+                        <div class="star_rate">★★★★★</div>
+                        수정/삭제
+                        <span class="comment_content">
+                            와 김치 쌈밥 간단하고도 맛있어 보이네요.
+                        </span>
+                    </div>
+<!--               뭔가 통제가 안됨. 웹에서 수정삭제 위치가 왜 저런지 모르겠음-->
+
+                    <div class="listed_content">
+                       <div class="comment_profile">
+
+                            <img class="profile_img" src="" alt="댓글 프로필">     
+                            <div class="profile_name">김치밥</div>
+                        </div>
+                        <div class="star_rate">★★★★★</div>
+                        <span class="comment_content">
+                            집에 김치랑 밥밖에 없는데 각이다
+                        </span>
+                        <span>2020-02-19</span>
+                        <span>수정/삭제</span>
+                    </div>
+                </div>
+                <button class="more">더 불러오기</button>
+            </div>
+
+            <div class="tap" id="tip">
+
+                <div class="aline_right">
+                    <button>글쓰기</button>
+                </div>
+
+                <div class="listed_content">
+                   <div>
+                        <div class="headline">만약 집에 김치가 깍두기밖에 없다면?!</div>
+                        <span class="profile_name">마법사</span>
+                   </div>
+                    
+                    <div class="content">
+                        <p>
+                            여러분 이럴때는 밥 안에 깍두기를 넣으면 됩니다 ㅎㅋㅎㅋㅎㅋ 누드김밥 아시죠? 그렇게 ㅋㅎㅋㅎㅋㅎ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="paging_number">
+                <a href="">이전</a>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+                <a href="">7</a>
+                <a href="">8</a>
+                <a href="">9</a>
+                <a href="">10</a>
+                <a href="">다음</a>
+                </div>
+            </div>
+
+            <div class="tap" id="mine_picture">
+
+                <div class="aline_right">
+                    <button>글쓰기</button>
+                </div>
+                
+                <div class="listed_content">
+                    <img src="" alt="요리자랑 사진">                    
+                    <div>
+                        <span class="headline">김치 쌈밥.... 와인과 먹었습니다</span>
+                        <span class="profile_name">새콤달콤</span>
+                    </div>
+                    <span class="content">
+                    김치의 새콤함과 와인의 새콤함이 합쳐져 환상적
+                    </span>
+                </div>
+
+                <div class="paging_number">
+                <a href="">이전</a>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+                <a href="">7</a>
+                <a href="">8</a>
+                <a href="">9</a>
+                <a href="">10</a>
+                <a href="">다음</a>
+                </div>
+            </div>
+        </div>
+    
+<!-- 관련 글이 연결 -->
+    </body>
+    
+</html>
