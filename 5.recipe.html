@@ -67,7 +67,7 @@
             }
             
             h2 {
-                margin-bottom: 50px;
+                margin-bottom: 60px;
             }
             
             button {
@@ -140,14 +140,35 @@
             
             .ingredient {
                 background-color: aliceblue;
+                display: inline-block;
                 
-                max-width: 800px;
-                
-                padding-left: 90px;
-                padding-right: 90px;
+                padding: 20px;
 
-                margin-left: auto;
-                margin-right: auto;
+                margin: 0 auto;
+                
+                column-count: 2;
+                column-width: 400px;
+                column-rule-style: dotted;
+                column-rule-width: 3px;
+                column-rule-color: aquamarine;
+            }
+            
+            .ingredient_box {
+
+                height: 200px;
+                display: block;
+                margin: auto 0;
+                padding: 0 60px;
+
+            }
+            .ingredient_box h3 {
+                margin: 0;
+                padding: 10px 0 30px;
+                        
+            }
+            
+            .ingredient_box ul {
+                margin: 0;
             }
             
             .ingredient table, .ingredient th {
@@ -202,7 +223,7 @@
             }
             
             .tap {
-                margin: 40px;
+                margin: 0px 10px 40px;
                 padding: 12px;
                 padding-top: 20px;
                 padding-bottom: 30px;
@@ -229,8 +250,8 @@
             .listed_content {
                 padding:30px;
                 padding-bottom: 30px;
-                display: inline-block;
-/*                overflow: hidden;*/
+/*                display: inline-block;*/
+                overflow: hidden;
 /*                clear: both;*/
             }
             
@@ -351,26 +372,32 @@
                
                 <h2>요리 재료</h2>
                 <div class="ingredient">
-                    <h3>재료</h3>
-                    <ul>
-                        <li>딸기</li>
-                        <li>배추</li>
-                    </ul>
-                    <h3>양념</h3>
-                    <table>
-                        <tr>
-                            <th>소금</th>
-                            <th>한 큰술</th>
-                        </tr>
-                        <tr>
-                            <th>고추장</th>
-                            <th>두 큰술</th>
-                        </tr>
-                        <tr>
-                            <th>슈크림</th>
-                            <th>다섯 큰술</th>
-                        </tr>
-                    </table>
+                    <div class="ingredient_box">
+                        <h3>재료</h3>
+                        <ul>
+                            <li>딸기</li>
+                            <li>배추</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ingredient_box">
+                        <h3>양념</h3>
+                        <table>
+                            <tr>
+                                <th>소금</th>
+                                <th>한 큰술</th>
+                            </tr>
+                            <tr>
+                                <th>고추장</th>
+                                <th>두 큰술</th>
+                            </tr>
+                            <tr>
+                                <th>슈크림</th>
+                                <th>다섯 큰술</th>
+                            </tr>
+                        </table>  
+                    </div>
+                    
 
                 </div>
             </div>
@@ -389,7 +416,7 @@
 
                     <li>굳이 소재목 형식으로 할 필욘 없겠지
                         <img src="" alt="설명3사진">
-                        <span>이렇게 하면 됩니다.</span>     
+                        <p>이렇게 하면 됩니다. 호롤ㄹ로로로로ㅗㄹ 줄간격을 위해 일단 추가해보는 테스트 내용들입니다. 마시께 먹으세여 </p>     
                     </li>
                 </ol>
             </div>
@@ -428,7 +455,9 @@
                         </div>
                         <div class="star_rate">★★★★★</div>
                         수정/삭제
-                        <span class="comment_content">글 쓴 내용Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non culpa id, illo repellat delectus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam libero earum quisquam quasi, error obcaecati quaerat eveniet beatae nihil autem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nihil totam tenetur voluptatum velit molestiae accusamus repellat delectus laborum et quas maiores facilis aperiam, amet voluptatibus ab harum odio omnis!</span>
+                        <span class="comment_content">
+                            설명충 등판 -* 김요리사님의 요리로 말하자면 500년 전통의 간장과 같은 맛을 냅니다. 여러분이 이 쓸쓸하랴 얼음에 라는 요리를 잘 모르실 거 같아서 말하는데 이건 되게 시적인 요리입니다. 얼음하면 뭐가 생각나세요? 차갑죠? 그렇습니다. 차가움입니다. 우리는 차가울 때 무엇을 느낍니까? 그렇습니다. 싸늘함과 쓸쓸함입니다. 쓸쓸하랴 얼음에 요리는 싸늘함보다 쓸쓸함에 집중해서 만든 요리입니다. 이 때 딸기는 겨울동안 얼어붙었던 딸기를 쓰시면 더욱 좋습니다. 저는 김요리사님 추종자 MVP NO1이기 때문에 이 모든 것을 알고 있는 겁니다. 여러분 김요리사하세요. 쓸쓸할때는 얼음을 먹으세요.
+                        </span>
                     </div>
 <!--               뭔가 통제가 안됨. 웹에서 수정삭제 위치가 왜 저런지 모르겠음-->
 
@@ -439,7 +468,9 @@
                             <div class="profile_name">글쓴이</div>
                         </div>
                         <div class="star_rate">★★★★★</div>
-                        <span class="comment_content">글 쓴 내용 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum beatae quaerat eveniet, dignissimos praesentium iure.</sapn>
+                        <span class="comment_content">
+                            마싯네여 왜 짧게 쓰면 .... 여기에 있는
+                        </span>
                         <span>2020-02-19</span>
                         <span>수정/삭제</span>
                     </div>
@@ -459,8 +490,11 @@
                         <span class="profile_name">글쓴이</span>
                    </div>
                     
-                    <div class="content">글 내용
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fuga temporibus unde voluptate, neque tempora laudantium magnam laboriosam enim possimus repellat molestiae vitae vel itaque cum tempore facere optio saepe commodi ad provident voluptas necessitatibus iusto. Blanditiis maxime deserunt, fugiat.</div>
+                    <div class="content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero molestias, ea recusandae officiis debitis quasi modi blanditiis incidunt voluptas, in eligendi vero possimus. Voluptas omnis similique reprehenderit. Rerum, harum, optio.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="paging_number">
