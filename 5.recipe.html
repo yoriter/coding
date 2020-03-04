@@ -127,13 +127,17 @@
                 text-align: center;
             }
             
-            .recipe_content .main_img {
-                width: 500px;
-                height: 300px;
+            img.main_img {
+                width: 700px;
+                height: 500px;
                 margin: 40px;
             }
             
-            .profile_img {
+            img {
+                border: 1px solid red;
+            }
+            
+            img.profile_img {
                 width: 60px;
                 height: 60px;
             }
@@ -183,19 +187,28 @@
                 overflow: hidden;
             }
             
+            .recipe_process_unit/*.recipe_process > div*/{
+                clear: both;
+                
+                column-count: 2;
+                column-width: 400px;
+                
+                margin-bottom: 60px;
+                
+            }
+            
+            
             .recipe_process li {
                 text-align: left;
-                clear: both;           
                 margin: 0 auto 60px;
             }
         
             .recipe_process img {
-                width: 360px;
-                height: 240px;
-                
-                margin: 0 0 60px 50px;
-                
-                float:right;        
+                min-width: 440px;
+                min-height: 320px;
+                margin: 0;
+                /*
+                margin: 0 0 60px 50px;*/       
             }
             
             .recipe_content + .scrap_n_share {
@@ -236,26 +249,33 @@
             
             .new_comment_box .profile_img {
                 float:left;
-                margin: 20px;
+                margin: 30px;
+                margin-right: 42px;
+            }
+            
+            .new_comment_box {
+                overflow: hidden;
             }
 
-            textarea {
+            textarea#new_comment_content {
                 display: block;
                 width: 70%;
                 height: 60px;
+                /* star_rate에는 왜 float를 안써도 되지..?
+                */
                 float:left;
+                
             }
             
             .listed_content {
                 padding:30px;
                 padding-bottom: 30px;
 /*                display: inline-block;*/
+
                 overflow: hidden;
-/*                clear: both;*/
             }
             
             .tap .headline {
-                display: inline;
                 font-weight: bold
             }
             
@@ -300,19 +320,20 @@
             }
             
             .content {
-                clear:both;
             }
             
-            #mine_picture .listed_content, #tip .listed_content{
-                height: 100px;
-                margin-bottom: 60px;
+            
+            .listed_content .content{
+                height: 8rem; /*글자가 중간에 잘리지 않을 정도의 높이값은 얼마인지 검토*/
+                overflow: hidden;
+                display: block;
             }
             
             #mine_picture img {
-                width: 150px;
-                height: 100px;
+                width: 240px;
+                height: 180px;
                 float: left;
-                margin-right: 30px;
+                margin-right: 42px;
             }
             
             .paging_number {
@@ -325,8 +346,6 @@
                 height: 40px;
             }
             
-<<<<<<< Updated upstream
-=======
             
             @media (max-width: 1199px) /*978~1199*/ {
                 
@@ -349,7 +368,6 @@
             }
                 
             
->>>>>>> Stashed changes
         </style>
     </head>
     
@@ -431,18 +449,24 @@
                 <h2>만드는 법</h2>
 
                 <ol class="recipe_process">
-                    <li>사람들이 설명을 얼마나 쓰게 될까
-                       <img src="" alt="설명1사진">
-                    </li>
+                   
+                    <div class="recipe_process_unit">
+                        <li>사람들이 설명을 얼마나 쓰게 될까</li>
+                        <img src="" alt="설명1사진">
+                    </div>
               
-                    <li>흐음 이러케 저러케 만드세요
+                    <div class="recipe_process_unit">
+                        <li>사람들이 설명을 얼마나 쓰게 될까 만약 설명의 길이가 길다면 어떨까</li>
                         <img src="" alt="설명2사진">
-                    </li>
+                    </div>
 
-                    <li>굳이 소재목 형식으로 할 필욘 없겠지
+                    <div class="recipe_process_unit">
+                        <li>사람들이 설명을 얼마나 쓰게 될까</li>
+                        <p>여기엔 팁?</p>
+
                         <img src="" alt="설명3사진">
-                        <p>이렇게 하면 됩니다. 호롤ㄹ로로로로ㅗㄹ 줄간격을 위해 일단 추가해보는 테스트 내용들입니다. 마시께 먹으세여 </p>     
-                    </li>
+                    </div>
+                    
                 </ol>
             </div>
         </div>
@@ -464,7 +488,7 @@
                     
             <div class="tap" id="comment">               
                <form class="new_comment_box" action="">
-                   <div class="">
+                   <div>
                         <img class="profile_img" src="" alt="댓글 프로필">
                         <div class="star_rate">☆☆☆☆☆</div>
                         <textarea name="" id="new_comment_content" ></textarea>
@@ -478,12 +502,21 @@
                             <img class="profile_img" src="" alt="댓글 프로필">
                             <div class="profile_name">글쓴이</div>
                         </div>
-                        <div class="star_rate">★★★★★</div>
-                        수정/삭제
+                        
                         <span class="comment_content">
-                            설명충 등판 -* 김요리사님의 요리로 말하자면 500년 전통의 간장과 같은 맛을 냅니다. 여러분이 이 쓸쓸하랴 얼음에 라는 요리를 잘 모르실 거 같아서 말하는데 이건 되게 시적인 요리입니다. 얼음하면 뭐가 생각나세요? 차갑죠? 그렇습니다. 차가움입니다. 우리는 차가울 때 무엇을 느낍니까? 그렇습니다. 싸늘함과 쓸쓸함입니다. 쓸쓸하랴 얼음에 요리는 싸늘함보다 쓸쓸함에 집중해서 만든 요리입니다. 이 때 딸기는 겨울동안 얼어붙었던 딸기를 쓰시면 더욱 좋습니다. 저는 김요리사님 추종자 MVP NO1이기 때문에 이 모든 것을 알고 있는 겁니다. 여러분 김요리사하세요. 쓸쓸할때는 얼음을 먹으세요.
-                        </span>
-                    </div>
+
+                            <div class="star_rate">★★★★★</div>
+                            <div>
+                                설명충 등판 -* 김요리사님의 요리로 말하자면 500년 전통의 간장과 같은 맛을 냅니다. 여러분이 이 쓸쓸하랴 얼음에 라는 요리를 잘 모르실 거 같아서 말하는데 이건 되게 시적인 요리입니다. 얼음하면 뭐가 생각나세요? 차갑죠? 그렇습니다. 차가움입니다. 우리는 차가울 때 무엇을 느낍니까? 그렇습니다. 싸늘함과 쓸쓸함입니다. 쓸쓸하랴 얼음에 요리는 싸늘함보다 쓸쓸함에 집중해서 만든 요리입니다. 이 때 딸기는 겨울동안 얼어붙었던 딸기를 쓰시면 더욱 좋습니다. 저는 김요리사님 추종자 MVP NO1이기 때문에 이 모든 것을 알고 있는 겁니다. 여러분 김요리사하세요. 쓸쓸할때는 얼음을 먹으세요.
+                            </div>
+                            <span>2020-02-28</span>
+                            <span>수정</span>
+                            <span>삭제</span>
+                                
+                                
+                                
+                            </span>
+                        </div>
 <!--               뭔가 통제가 안됨. 웹에서 수정삭제 위치가 왜 저런지 모르겠음-->
 
                     <div class="listed_content">
@@ -492,14 +525,21 @@
                             <img class="profile_img" src="" alt="댓글 프로필">     
                             <div class="profile_name">글쓴이</div>
                         </div>
-                        <div class="star_rate">★★★★★</div>
                         <span class="comment_content">
-                            마싯네여 왜 짧게 쓰면 .... 여기에 있는
+                           
+                           <div class="star_rate">★★★★★</div>
+
+                            <div>
+                                마싯네여 왜 짧게 쓰면 .... 여기에 있는
+                            </div>
+                            
+                            <span>2020-02-19</span>
+                            <span>수정</span>
+                            <span>삭제</span>
                         </span>
-                        <span>2020-02-19</span>
-                        <span>수정/삭제</span>
+                        
                     </div>
-                </div>
+                </div>`
                 <button class="more">더 불러오기</button>
             </div>
 
@@ -511,8 +551,9 @@
 
                 <div class="listed_content">
                    <div>
-                        <div class="headline">글 제목</div>
+                        <span class="headline">글 제목</span>
                         <span class="profile_name">글쓴이</span>
+                        <span>2020-02-28</span>
                    </div>
                     
                     <div class="content">
@@ -545,14 +586,29 @@
                 </div>
                 
                 <div class="listed_content">
-                    <img src="" alt="요리자랑 사진">                    
+                    <img src="" alt="요리자랑 사진">                
                     <div>
                         <span class="headline">글 제목의 길이를 늘려보게따 한 이정도쯤? 이정도?</span>
                         <span class="profile_name">글쓴이</span>
+                        <span>2020-02-28</span>
+
                     </div>
-                    <span class="content">글 내용
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed suscipit harum nemo aliquid alias facere fugiat quae. Animi, odio, voluptatibus?
-                    </span>
+                    <div class="content">글 내용
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed suscipit harum nemo aliquid alias facere fugiat quae. Animi, odio, voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum perspiciatis obcaecati eaque veritatis ullam aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea, non corporis! Voluptates distinctio aliquid numquam, expedita incidunt illo impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aut dignissimos. Eos, a, expedita! Sequi sed accusamus beatae eaque eveniet.
+                    </div>
+                </div>
+                
+                <div class="listed_content">
+                    <img src="" alt="요리자랑 사진">                
+                    <div>
+                        <span class="headline">테스트용 글 추가</span>
+                        <span class="profile_name">글쓴이</span>
+                        <span>2020-03-04</span>
+
+                    </div>
+                    <div class="content">글 내용
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed suscipit harum nemo aliquid alias facere fugiat quae. Animi, odio, voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum perspiciatis obcaecati eaque veritatis ullam aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea, non corporis! Voluptates distinctio aliquid numquam, expedita incidunt illo impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aut dignissimos. Eos, a, expedita! Sequi sed accusamus beatae eaque eveniet.
+                    </div>
                 </div>
 
                 <div class="paging_number">
