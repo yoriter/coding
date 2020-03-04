@@ -18,7 +18,7 @@
         .position_mid {
             float: none;
             background-color: white;
-            width: 1400px;
+            max-width: 1400px;
             height: auto;
             margin: 0 auto;
         }
@@ -73,6 +73,9 @@
             font-size: 1.25rem;
             font-weight: bold;
         }
+        .every_icon {
+                display: inline-block;
+        }
         .situation_icon {
             vertical-align: middle;
             width: 70px;
@@ -95,8 +98,9 @@
         
         #result {
             display:block;
-            margin-left: 200px;
-            margin-bottom: 40px;
+            margin: 0 auto;
+            padding-left: 200px;
+            padding-bottom: 40px;
         }
         
         .small_input {
@@ -120,7 +124,7 @@
         }
         
         .how_much_location {
-            width: 1300px;
+            width: 90%;
             text-align: right;
         }
         .how_much {
@@ -144,7 +148,7 @@
         }
         
         .food_list {
-            width: 1300px;
+            max-width: 1300px;
             height: auto;
             margin: 0 auto;
             display: block;
@@ -153,7 +157,7 @@
         .food_information {
             width: 250px;
             height: 480px;
-            margin: 30px;
+            margin: 20px;
             display: inline-block;
             text-align: center;
          }
@@ -168,13 +172,106 @@
             height: 200px;
             display: inline-block;
         }
+        
+        @media (max-width: 1200px) {
+            .position_mid {
+                width: 100%;
+            }
+            #result {
+                padding-left: 0;
+                max-width: 780px;
+            }
+            h1 {
+                display: inline-block;
+            }
+            .select_option {
+                width: auto;
+                display: inline-block;
+                margin: 0 auto;
+            }
+            .how_much_location {
+                max-width: 1050px;
+                margin: 0 auto;
+            } 
+            
+            .food_list {
+                margin: 0 auto;
+                max-width: 1000px;
+            }
+            .manu_box {
+                max-width: 860px;
+            }
+        }
+        
+        @media (max-width: 978px) {
+            .menu {
+                max-width: 580px;
+                word-break: keep-all;
+            }
+            
+            #result {
+                padding-left: 0;
+                max-width: 780px;
+                
+            }
+            h1 {
+                visibility: hidden;
+            }
+            h1:before{
+                visibility: visible;
+                display: inline-block;
+                content: "검색결과\A토마토, 파스타면, 참치, 간장/-기름";
+                white-space: pre;
+                width: 100%;
+                font-size: 1.875rem;
+                line-height: 3rem;
+                font-weight: bold;
+                text-align: center;
+            }
+            .selected_situation {
+                display: block;
+                width: 100%;
+                height: 60px;
+                line-height: 60px;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            .every_icon {
+                display: inline-block;
+                width: 400px;
+            }
+            .situation_icon:nth-last-child(1) {
+                margin-right: 0;
+            }
+            .select_option {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                margin: 0 auto;
+            }
+            .small_input input {
+                width: 270px;
+            }
+            .selected_ingredient {
+                text-align:left;
+            }
+            .select_ingredient_name {
+                margin-left: 38%;
+                max-width: 400px;
+            }
+            .food_list {
+                margin: 0 auto;
+                max-width: 750px;
+            }
+        }
     </style>
     </head>
   
   
     <body>
         <div class="position_mid">
-            <a href=""><img src="situation_icon.jpg" alt="로고" id="logo"></a>
+            <a href=""><img src="요리터.jpg" alt="로고" id="logo"></a>
         <div class="menu">
             <ul class="menu_box">
                 <li><a href="">요리목록</a></li>
@@ -190,17 +287,19 @@
         </div>
     
         <div id="result">
-            <h1>검색결과 창:토마토, 파스타면, 참치, 간장/-기름</h1>
+            <h1> 검색결과: 토마토, 파스타면, 참치, 간장/-기름</h1>
     
             <div class="select_option">
                 <div class="selected_situation">상황</div>
-                <img src="situation_icon.jpg"         class="situation_icon">
-                <img src="situation_icon.jpg"         class="situation_icon">
-                <img src="situation_icon.jpg"         class="situation_icon">
-                <img src="situation_icon.jpg"         class="situation_icon">
-                <img src="situation_icon.jpg"         class="situation_icon">
-                <img src="situation_icon.jpg"         class="situation_icon">
-                <img src="situation_icon.jpg"         class="situation_icon">
+                    <div class="every_icon">
+                    <img src="situation_icon.jpg"         class="situation_icon">
+                    <img src="%ED%83%95.jpg"         class="situation_icon">
+                    <img src="situation_icon.jpg"         class="situation_icon">
+                    <img src="situation_icon.jpg"         class="situation_icon">
+                    <img src="situation_icon.jpg"         class="situation_icon">
+                    <img src="situation_icon.jpg"         class="situation_icon">
+                    <img src="situation_icon.jpg"         class="situation_icon">
+                </div>
             </div>
        
             <div class="select_option">   
