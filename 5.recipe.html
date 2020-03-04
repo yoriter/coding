@@ -127,7 +127,7 @@
                 text-align: center;
             }
             
-            .recipe_content img.main_img {
+            img.main_img {
                 width: 700px;
                 height: 500px;
                 margin: 40px;
@@ -137,7 +137,7 @@
                 border: 1px solid red;
             }
             
-            .profile_img {
+            img.profile_img {
                 width: 60px;
                 height: 60px;
             }
@@ -187,9 +187,16 @@
                 overflow: hidden;
             }
             
-            .recipe_process > div{
-                clear: both;           
+            .recipe_process_unit/*.recipe_process > div*/{
+                clear: both;
+                
+                column-count: 2;
+                column-width: 400px;
+                
+                margin-bottom: 60px;
+                
             }
+            
             
             .recipe_process li {
                 text-align: left;
@@ -197,12 +204,11 @@
             }
         
             .recipe_process img {
-                width: 440px;
-                height: 320px;
-                
-                margin: 0 0 60px 50px;
-                
-                float:right;        
+                min-width: 440px;
+                min-height: 320px;
+                margin: 0;
+                /*
+                margin: 0 0 60px 50px;*/       
             }
             
             .recipe_content + .scrap_n_share {
@@ -243,20 +249,27 @@
             
             .new_comment_box .profile_img {
                 float:left;
-                margin: 20px;
+                margin: 30px;
+                margin-right: 42px;
+            }
+            
+            .new_comment_box {
+                overflow: hidden;
             }
 
-            textarea {
+            textarea#new_comment_content {
                 display: block;
                 width: 70%;
                 height: 60px;
+                /* star_rate에는 왜 float를 안써도 되지..?
+                */
                 float:left;
+                
             }
             
             .listed_content {
                 padding:30px;
                 padding-bottom: 30px;
-                margin-bottom: 60px;
 /*                display: inline-block;*/
 
                 overflow: hidden;
@@ -320,7 +333,7 @@
                 width: 240px;
                 height: 180px;
                 float: left;
-                margin-right: 30px;
+                margin-right: 42px;
             }
             
             .paging_number {
@@ -334,15 +347,23 @@
             }
             
             
-            @media (max-width 1200px) {
+            @media (max-width: 1200px) {
                 
             }
             
-            @media (max-width 978px) {
+            @media (max-width: 978px) {
+                img.main_img {
+                    width: 500px;
+                    height: 440px;
+                }
+                
+
+                
+
                 
             }
             
-            @media (max-width 600px) {
+            @media (max-width: 600px) {
                 
             }
                 
@@ -429,20 +450,21 @@
 
                 <ol class="recipe_process">
                    
-                    <div class="clearing">
-                        <img src="" alt="설명1사진">
+                    <div class="recipe_process_unit">
                         <li>사람들이 설명을 얼마나 쓰게 될까</li>
+                        <img src="" alt="설명1사진">
                     </div>
               
-                    <div class="clearing">
+                    <div class="recipe_process_unit">
+                        <li>사람들이 설명을 얼마나 쓰게 될까 만약 설명의 길이가 길다면 어떨까</li>
                         <img src="" alt="설명2사진">
-                        <li>사람들이 설명을 얼마나 쓰게 될까</li>
                     </div>
 
-                    <div class="clearing">
-                        <img src="" alt="설명3사진">
+                    <div class="recipe_process_unit">
                         <li>사람들이 설명을 얼마나 쓰게 될까</li>
                         <p>여기엔 팁?</p>
+
+                        <img src="" alt="설명3사진">
                     </div>
                     
                 </ol>
@@ -466,7 +488,7 @@
                     
             <div class="tap" id="comment">               
                <form class="new_comment_box" action="">
-                   <div class="">
+                   <div>
                         <img class="profile_img" src="" alt="댓글 프로필">
                         <div class="star_rate">☆☆☆☆☆</div>
                         <textarea name="" id="new_comment_content" ></textarea>
@@ -569,6 +591,19 @@
                         <span class="headline">글 제목의 길이를 늘려보게따 한 이정도쯤? 이정도?</span>
                         <span class="profile_name">글쓴이</span>
                         <span>2020-02-28</span>
+
+                    </div>
+                    <div class="content">글 내용
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed suscipit harum nemo aliquid alias facere fugiat quae. Animi, odio, voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum perspiciatis obcaecati eaque veritatis ullam aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea, non corporis! Voluptates distinctio aliquid numquam, expedita incidunt illo impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aut dignissimos. Eos, a, expedita! Sequi sed accusamus beatae eaque eveniet.
+                    </div>
+                </div>
+                
+                <div class="listed_content">
+                    <img src="" alt="요리자랑 사진">                
+                    <div>
+                        <span class="headline">테스트용 글 추가</span>
+                        <span class="profile_name">글쓴이</span>
+                        <span>2020-03-04</span>
 
                     </div>
                     <div class="content">글 내용
