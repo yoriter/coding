@@ -1,108 +1,88 @@
 <html>
     <head>
-       
         <meta charset="utf-8">
         <title>
             쓸쓸하랴 얼음에 - 요리터
         </title>
-        <link rel="stylesheet" href="font/font.css">
-        
+        <link rel="stylesheet" href="font/font.css"> 
         <style>
             
-/*            16px 빨강색 css 지정이 점점 구체적으로 들어가는 식이 아니라서 효율적이지 않은지도. 한번에 고치기에는 더 나으려나?*/
+            
+            
+            /* 글씨 크기 영역 */
+            /*            16px 빨강색 css 지정이 점점 구체적으로 들어가는 식이 아니라서 효율적이지 않은지도. 한번에 고치기에는 더 나으려나?*/
             .count_comment, img, input, .paging_number {
                 font-size: 1rem;
-/*                color: red;*/
             }
-            
-/*            18px 파랑색 기본 글씨 크기를 18로 봐도 무방할 것 같다. 나머지를 예외로 하고.*/
+            /*            18px 파랑색 기본 글씨 크기를 18로 봐도 무방할 것 같다. 나머지를 예외로 하고.*/
             button, .ingredient, .profile_name, .comment_content, .tap .content, li span {
                 font-size: 1.125rem;
-/*                color: blue;*/
             }
-            
-/*            20px 초록색*/
             .menu_box li, .epilog li, .tap .headline, .ingredient h3 {
                 font-size: 1.25rem;
-/*                color: green;*/
             }
-            
-/*            24px 보라색*/
             .recipe_process li, h2 {
                 font-size: 1.5rem;
-/*                color: violet;*/
             }
-            
-/*            30px*/
             h1 {
                 font-size: 1.875rem;
-/*                color: aqua;*/
             }
+            
+            
+            
+            /* 글씨 크기 외 CSS 영역 */
             
             a {
                 text-decoration:none;
             }
-            
             html {
                 background-color: lightgray;
+                margin:5px;
             }
-            
             body {
                 background-color: white;
                 margin-top: 0;
                 padding-bottom: 300px;
                 font-family: "NanumGothic-Regular", "NanumGothic";
                 line-height:2rem;
-
                 
+                margin-right: auto;
+                margin-left:auto;
+                max-width: 1400px;
             }
-            
-            @media (min-width: 800px) {
-                body {
-                    margin-right: auto;
-                    margin-left:auto;
-                    max-width: 1400px;
-                    
-                }
-            }
-            
             h2 {
                 margin-bottom: 60px;
             }
-            
             button {
 /*                width: 80px;*/
                 height: 40px;
                 min-width: 80px;
             }
-                    
-            .scrap_n_share {
-                padding-top: 60px;
+            img {
+                border: 1px solid red;
+                box-sizing: border-box;
             }
+                
+            
 
             .header {
                 text-align: center;
             }
-            
             #logo {
                 width: 150px;
                 height: 150px;
-                padding-top: 100px;
+                margin-top: 100px;
                 margin-bottom: 60px;
             }
-            
             .header_search {
                 margin-top: 20px;
             }
-            
             #main_q {
                 width: 300px;
                 height: 40px;
                 padding-left: 15px;
             }
             
-            
-/*            창이 작아 졌을 때 조절 필요         */
             .menu_box {
                 max-width: 900px;
                 line-height: 55px;
@@ -114,7 +94,6 @@
                 
                 padding-inline-start:0;
             }
-            
             .menu_box li, .epilog li {
                 display:inline-block;
                 margin-left: 30px;
@@ -126,20 +105,18 @@
                 margin: 40px;
                 text-align: center;
             }
-            
             img.main_img {
                 width: 700px;
                 height: 500px;
-                margin: 40px;
+                margin: 40px 0;
             }
-            
-            img {
-                border: 1px solid red;
-            }
-            
             img.profile_img {
                 width: 60px;
                 height: 60px;
+            }
+            
+            .module {
+                margin: 130px auto;
             }
             
             .ingredient {
@@ -156,81 +133,62 @@
                 column-rule-width: 3px;
                 column-rule-color: aquamarine;
             }
-            
             .ingredient_box {
-
                 height: 200px;
                 display: block;
                 margin: auto 0;
                 padding: 0 60px;
-
             }
             .ingredient_box h3 {
                 margin: 0;
                 padding: 10px 0 30px;
-                        
             }
-            
             .ingredient_box ul {
                 margin: 0;
             }
-            
             .ingredient table, .ingredient th {
                 text-align: left;
                 border: 1px gray solid;
             }
             
+            
+            /* 요리 과정 설명란 */
             ol.recipe_process {
                 max-width: 900px;
                 max-width: 900px;
                 margin: 0 auto;
                 overflow: hidden;
             }
-            
             .recipe_process_unit/*.recipe_process > div*/{
-                clear: both;
-                
                 column-count: 2;
                 column-width: 400px;
-                
                 margin-bottom: 60px;
-                
             }
-            
-            
             .recipe_process li {
                 text-align: left;
-                margin: 0 auto 60px;
+                margin-bottom: 20px;
             }
-        
             .recipe_process img {
-                min-width: 440px;
-                min-height: 320px;
-                margin: 0;
-                /*
-                margin: 0 0 60px 50px;*/       
+                width: 400px;
+                height: 300px;
+                margin: 0;  
             }
-            
+
             .recipe_content + .scrap_n_share {
-                clear: both;
                 text-align: center;
+                margin-bottom: 50px;
             }
             
-            .module {
-                margin: 130px auto;
-            }
             
+            /* 후기란 */
             .epilog {
-/*                width: 1080px;*/
-/*                border: red 1px solid;*/
                 margin: 40px;
-            }
-            
+            } 
             .epilog h2 {
                 padding-left: 70px;
             }
-            .epilog ul li {
-                width: 180px;
+            .epilog li {
+                width: auto;
                 line-height: 60px;
             }
             
@@ -240,38 +198,53 @@
                 padding-top: 20px;
                 padding-bottom: 30px;
                 background-color: floralwhite;
-
             }
             
-            .tap #comment {
-                height: 700px;
-            }
-            
-            .new_comment_box .profile_img {
+            /* 후기 - 댓글란 */
+            .new_comment_box img.profile_img {
                 float:left;
                 margin: 30px;
                 margin-right: 42px;
             }
-            
-            .new_comment_box {
-                overflow: hidden;
-            }
-
             textarea#new_comment_content {
                 display: block;
-                width: 70%;
+                width: 70%;       
                 height: 60px;
-                /* star_rate에는 왜 float를 안써도 되지..?
-                */
                 float:left;
-                
             }
-            
+            .comment_profile {
+/*                clear:both; 있었는데 없어도 되는 것*/
+                float:left;
+                margin-right: 30px;
+            }
+            .comment_content {
+                float:left;
+                width: 100%;
+                margin-right: -100px;
+                padding-right: 100px;
+                box-sizing: border-box;
+            }
+            #comment .new_comment_box button {
+                float:right;
+                color: red;
+                margin: 20px;
+            }
+            .count_comment {
+                clear: both;
+            }
+            #comment button.more {
+                color: red;
+                margin: auto;
+                display: block;
+            }
+      
+            .listed_content .profile_name {
+                padding: 3px;
+                margin: auto;
+            }
             .listed_content {
                 padding:30px;
                 padding-bottom: 30px;
-/*                display: inline-block;*/
-
                 overflow: hidden;
             }
             
@@ -286,45 +259,11 @@
                 margin-right: 0;
             }
             
-            .comment_profile {
-                clear:both;
-                float:left;
-                margin-right: 30px;
-            }
-            
-            #comment button.more {
-                clear: both;
-                color: red;
-                margin: auto;
-                display: block;
-            }
-            
-            .comment_content {
-                float:left;
-                width: 80%;
-            }
-            
-            #comment .new_comment_box button {
-                float:right;
-                color: red;
-                margin: 20px;
-            }
-            
-            .count_comment {
-                clear: both;
-            }
-            
-            .listed_content .profile_name {
-                padding: 3px;
-                margin: auto;
-            }
-            
             .content {
+                text-align: justify;
             }
-            
-            
-            .listed_content .content{
-                height: 8rem; /*글자가 중간에 잘리지 않을 정도의 높이값은 얼마인지 검토*/
+            #tip .content, #mine_picture .content{
+                height: 7.7rem; /*글자가 중간에 잘리지 않을 정도의 높이값은 얼마인지 검토*/
                 overflow: hidden;
                 display: block;
             }
@@ -340,34 +279,81 @@
                 text-align: center;
                 margin-top: 80px;
             }
-            
             .paging_number a {
                 width: 40px;
                 height: 40px;
             }
             
+<<<<<<< Updated upstream
+
             
+=======
+            /*반응형*/
+>>>>>>> Stashed changes
             @media (max-width: 1199px) /*978~1199*/ {
                 
+                img.main_img {
+                    width: 600px;
+                    height: 500px;
+                }
+                
+                html {
+                    background-color:powderblue;
+                }
             }
             
             @media (max-width: 977px) /*600~977*/ {
                 img.main_img {
-                    width: 500px;
-                    height: 440px;
+                    width: 440px;
+                    height: 380px;
                 }
                 
-
+                .recipe_process img {
+        
+                }
                 
+                #mine_picture img {
 
+                    width: 200px;
+                    height: 150px;
+    
+                }
+                #mine_picture .headline {
+                   /* display: block; */
+                }
                 
+                .epilog {
+                    margin: 20px;
+                }
+                
+                html {
+                    background-color:pink;
+                }
             }
             
             @media (max-width: 599px) /*360~599*/ {
+                img.main_img {
+                    width: 340px;
+                    height: 280px;
+                }
                 
+                .recipe_process img {
+                    width: 340px;
+                    height: 260px;
+                }
+                
+                #mine_picture img {
+                    width: 150px;
+                    height: 100px;
+                }
+                
+                html {
+                    background-color:yellow;
+                }
             }
                 
             
+
         </style>
     </head>
     
@@ -398,8 +384,6 @@
             <div class="scrap_n_share">
                 <button>스크랩</button>
                 <button>공유</button>
-                
-<!--                공유박스 추가-->
             </div>
         
             <img class="main_img" src="" alt="메인사진">
@@ -461,9 +445,7 @@
                     </div>
 
                     <div class="recipe_process_unit">
-                        <li>사람들이 설명을 얼마나 쓰게 될까</li>
-                        <p>여기엔 팁?</p>
-
+                        <li><p>사람들이 설명을 얼마나 쓰게 될까 길이가 더러덜더더ㅓ더러더더 더ㅓ 긴 경우를 테스트 하기 위해 추가함 길몬 진화 그라우몬 아무말을 쓰려고 합니다.... 아무말........무말알너리ㅏ멀안ㄹ무말랭 </p></li>
                         <img src="" alt="설명3사진">
                     </div>
                     
@@ -488,12 +470,19 @@
                     
             <div class="tap" id="comment">               
                <form class="new_comment_box" action="">
-                   <div>
-                        <img class="profile_img" src="" alt="댓글 프로필">
-                        <div class="star_rate">☆☆☆☆☆</div>
-                        <textarea name="" id="new_comment_content" ></textarea>
-                        <button type="submit"> 댓글 올리기</button>
-                    </div>
+                   
+                        
+                    <img class="profile_img"  src="" alt="댓글 프로필">
+
+
+                    <div class="star_rate">☆☆☆☆☆</div>
+                    <textarea name="" id="new_comment_content" ></textarea>
+
+
+                    <button type="submit"> 댓글 올리기</button>
+                        
+                        
+                    
                 </form>
                 <div class="count_comment">댓글 수 n개</div>
                 <div class="comment_list">
@@ -506,7 +495,7 @@
                         <span class="comment_content">
 
                             <div class="star_rate">★★★★★</div>
-                            <div>
+                            <div class="content">
                                 설명충 등판 -* 김요리사님의 요리로 말하자면 500년 전통의 간장과 같은 맛을 냅니다. 여러분이 이 쓸쓸하랴 얼음에 라는 요리를 잘 모르실 거 같아서 말하는데 이건 되게 시적인 요리입니다. 얼음하면 뭐가 생각나세요? 차갑죠? 그렇습니다. 차가움입니다. 우리는 차가울 때 무엇을 느낍니까? 그렇습니다. 싸늘함과 쓸쓸함입니다. 쓸쓸하랴 얼음에 요리는 싸늘함보다 쓸쓸함에 집중해서 만든 요리입니다. 이 때 딸기는 겨울동안 얼어붙었던 딸기를 쓰시면 더욱 좋습니다. 저는 김요리사님 추종자 MVP NO1이기 때문에 이 모든 것을 알고 있는 겁니다. 여러분 김요리사하세요. 쓸쓸할때는 얼음을 먹으세요.
                             </div>
                             <span>2020-02-28</span>
@@ -517,7 +506,7 @@
                                 
                             </span>
                         </div>
-<!--               뭔가 통제가 안됨. 웹에서 수정삭제 위치가 왜 저런지 모르겠음-->
+
 
                     <div class="listed_content">
                        <div class="comment_profile">
@@ -558,7 +547,7 @@
                     
                     <div class="content">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero molestias, ea recusandae officiis debitis quasi modi blanditiis incidunt voluptas, in eligendi vero possimus. Voluptas omnis similique reprehenderit. Rerum, harum, optio.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero molestias, ea recusandae officiis debitis quasi modi blanditiis incidunt voluptas, in eligendi vero possimus. Voluptas omnis similique reprehenderit. Rerum, harum, optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus magni eligendi, dolorem quisquam, facere deleniti similique autem itaque voluptatum obcaecati ducimus neque quae fuga maiores error earum cum explicabo, totam repellat 
                         </p>
                     </div>
                 </div>
@@ -594,15 +583,18 @@
 
                     </div>
                     <div class="content">글 내용
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed suscipit harum nemo aliquid alias facere fugiat quae. Animi, odio, voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum perspiciatis obcaecati eaque veritatis ullam aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea, non corporis! Voluptates distinctio aliquid numquam, expedita incidunt illo impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aut dignissimos. Eos, a, expedita! Sequi sed accusamus beatae eaque eveniet.
+                    한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글 한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글 한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나이렇게 쓰다보면 언젠가 끝이 오고 곧 어떤 일이 일어나는데 내용은 계속 이어지지만 곧 이 글은 잘리고 맙니다 그런데 써야하는 글이 너무 많은 것이다 지금쯤 잘렸으려나 그러타
                     </div>
                 </div>
                 
                 <div class="listed_content">
                     <img src="" alt="요리자랑 사진">                
                     <div>
-                        <span class="headline">테스트용 글 추가</span>
-                        <span class="profile_name">글쓴이</span>
+                       <div>
+                           <span class="headline">테스트용 글 추가</span>
+                            <span class="profile_name">글쓴이</span>
+                       </div>
+                        
                         <span>2020-03-04</span>
 
                     </div>
