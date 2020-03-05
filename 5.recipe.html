@@ -1,6 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>
             쓸쓸하랴 얼음에 - 요리터
         </title>
@@ -10,21 +11,45 @@
             
             
             /* 글씨 크기 영역 */
-            /*            16px 빨강색 css 지정이 점점 구체적으로 들어가는 식이 아니라서 효율적이지 않은지도. 한번에 고치기에는 더 나으려나?*/
-            .count_comment, img, input, .paging_number {
+
+            .font-small {
                 font-size: 1rem;
             }
-            /*            18px 파랑색 기본 글씨 크기를 18로 봐도 무방할 것 같다. 나머지를 예외로 하고.*/
-            button, .ingredient, .profile_name, .comment_content, .tap .content, li span {
+            .input {
+                font-size: 1rem;
+            }
+            .font-medium {
                 font-size: 1.125rem;
             }
-            .menu_box li, .epilog li, .tap .headline, .ingredient h3 {
+            body {
+                font-size: 1.125rem;
+            }
+            button {
+                font-size: 1.125rem;
+            }
+            
+            .font-large {
                 font-size: 1.25rem;
             }
-            .recipe_process li, h2 {
+            
+            .headline {
+                font-size: 1.25rem;                
+            }
+            
+            h3 {
+                font-size: 1.25rem;
+            }
+            .font-xlarge{
                 font-size: 1.5rem;
             }
-            h1 {
+            .recipe_process {
+                font-size:  1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            .font-xxlarge h1 {
                 font-size: 1.875rem;
             }
             
@@ -51,12 +76,11 @@
                 max-width: 1400px;
             }
             h2 {
-                margin-bottom: 60px;
+                margin-bottom: 40px;
             }
             button {
-/*                width: 80px;*/
-                height: 40px;
                 min-width: 80px;
+                height: 40px;
             }
             img {
                 border: 1px solid red;
@@ -91,18 +115,20 @@
                 list-style-type: none;
                 margin: 0 auto 60px;
                 display: block;
+                word-break: keep-all;
                 
                 padding-inline-start:0;
             }
             .menu_box li, .epilog li {
-                display:inline-block;
+                display:inline;
                 margin-left: 30px;
                 margin-right: 30px;
                 font-weight: bold;
             }
             
             .recipe_content {
-                margin: 40px;
+                max-width:1100px;
+                margin: 0 auto;
                 text-align: center;
             }
             img.main_img {
@@ -146,6 +172,10 @@
             .ingredient_box ul {
                 margin: 0;
             }
+            
+            .menu {
+                padding-inline-start:0;
+            }
             .ingredient table, .ingredient th {
                 text-align: left;
                 border: 1px gray solid;
@@ -154,7 +184,6 @@
             
             /* 요리 과정 설명란 */
             ol.recipe_process {
-                max-width: 900px;
                 max-width: 900px;
                 margin: 0 auto;
                 overflow: hidden;
@@ -174,9 +203,15 @@
                 margin: 0;
             }
 
+    
             .recipe_content + .scrap_n_share {
                 text-align: center;
                 margin-bottom: 50px;
+            }
+            
+            .recipe_content > .scrap_n_share {
+                text-align: right;
+                color: red;
             }
             
             
@@ -244,26 +279,30 @@
             }
             .listed_content {
                 padding:30px;
-                padding-bottom: 30px;
                 overflow: hidden;
             }
             
-            .tap .headline {
-                font-weight: bold
+            .headline {
+                font-weight: bold;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             
-            .tap button{
-/*                text-align: right;*/
+            .write button {
                 display: block;
-                margin-left : auto;
+                margin-left: auto;
                 margin-right: 0;
             }
+            
+            
             
             .content {
                 text-align: justify;
             }
             #tip .content, #mine_picture .content{
-                height: 7.7rem; /*글자가 중간에 잘리지 않을 정도의 높이값은 얼마인지 검토*/
+                line-height: 1.7rem;
+                max-height: 6.8rem;
                 overflow: hidden;
                 display: block;
             }
@@ -284,12 +323,7 @@
                 height: 40px;
             }
             
-<<<<<<< Updated upstream
-
-            
-=======
             /*반응형*/
->>>>>>> Stashed changes
             @media (max-width: 1199px) /*978~1199*/ {
                 
                 img.main_img {
@@ -313,17 +347,21 @@
                 }
                 
                 #mine_picture img {
-
-                    width: 200px;
-                    height: 150px;
-    
-                }
-                #mine_picture .headline {
-                   /* display: block; */
+                    width: 220px;
+                    height: 170px;
+                    margin-right: 22;
                 }
                 
+                .menu_box li, .epilog li {
+                    margin: 0 20px;
+                }
+
                 .epilog {
-                    margin: 20px;
+                    margin: 10px;
+                }
+                
+                .listed_content {
+                    padding: 20px 0px;
                 }
                 
                 html {
@@ -332,23 +370,105 @@
             }
             
             @media (max-width: 599px) /*360~599*/ {
+                
+                .font-small {
+                font-size: 0.625rem;
+                }
+                .input {
+                    font-size: 0.75rem;
+                }
+                .font-medium, {
+                    font-size: 0.75rem;
+                }
+                body {
+                    font-size: 0.75rem;
+                    line-height: 1.4rem;
+                }
+                button {
+                    font-size: 0.75rem;
+                }
+                .font-large {
+                    font-size: 0.75rem;
+                }
+                .headline {
+                    font-size: 0.75rem;
+                }
+                h3 {
+                    font-size: 0.75rem;
+                }
+                .font-xlarge{
+                    font-size: 0.875rem;
+                }
+                .recipe_process {
+                    font-size:  0.875rem;
+                }
+                h2 {
+                    font-size: 0.875rem;
+                }
+                h1 {
+                    font-size: 1.125rem;
+                }
+            
+
+                
+                #logo {
+                    width: 60px;
+                    height: 60px;
+                    margin: 10px;
+                }
+                
+                #main_q {
+                    max-width: 450px;
+                    min-width:240px;
+                    height: 40px;   
+                }
+                
                 img.main_img {
-                    width: 300px;
-                    height: 220px;
+                    width: 250px;
+                    height: 180px;
                 }
                 
                 .recipe_content {
-                    margin: 20px;
+                    margin: 0;
                 }
                 .recipe_process img {
-                    width: 300px;
-                    height: 220px;
+                    width: 250px;
+                    height: 180px;
                 }
                 
                 #mine_picture img {
                     width: 150px;
                     height: 100px;
                 }
+                
+                img.profile_img {
+                    width: 30px;
+                    height: 30px;
+                    
+                }
+                
+                .epilog {
+                    margin: 0;
+                }
+                
+                .comment_profile{
+                    margin-right: 10px;
+                }
+                .comment_content {
+                    margin-right: -50px;
+                    padding-right: 50px;
+                }
+                
+                .listed_content {
+                    padding: 30px 0;
+                }
+                
+                #tip .content, #mine_picture .content {
+                    line-height: 1.4rem;
+                    height: 4.2rem;
+                    overflow: hidden;
+                }
+                
                 
                 html {
                     background-color:yellow;
@@ -373,21 +493,22 @@
                 <button type="submit">검색하기</button>
             </form>
 
-            <ul class=menu_box>
-                <li>요리목록</li>
-                <li>인기요리</li>
-                <li>제철요리</li>
-                <li>안내사항</li>
-                <li>마이페이지</li>  
+            <ul class="menu_box font-large" >
+                <li>요리 목록</li>
+                <li>인기 요리</li>
+                <li>제철 요리</li>
+                <li>안내 사항</li>
+                <li>마이 페이지</li>  
             </ul>
         </div>
         
         <div class="recipe_content">
-        
+            
             <div class="scrap_n_share">
                 <button>스크랩</button>
                 <button>공유</button>
             </div>
+
         
             <img class="main_img" src="" alt="메인사진">
 
@@ -465,7 +586,7 @@
         <div class="epilog">
             <h2>후기</h2>
 
-            <ul>
+            <ul class="menu font-medium">
                 <li>얼마나 맛있었나요?</li>
                 <li>요리팁 공유해요</li>
                 <li>나도 만들었어요</li>
@@ -537,25 +658,23 @@
 
             <div class="tap" id="tip">
 
-                <div class="aline_right">
+                <div class="write">
                     <button>글쓰기</button>
                 </div>
 
                 <div class="listed_content">
                    <div>
-                        <span class="headline">글 제목</span>
+                        <div class="headline">글 제목</div>
                         <span class="profile_name">글쓴이</span>
                         <span>2020-02-28</span>
                    </div>
                     
                     <div class="content">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero molestias, ea recusandae officiis debitis quasi modi blanditiis incidunt voluptas, in eligendi vero possimus. Voluptas omnis similique reprehenderit. Rerum, harum, optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus magni eligendi, dolorem quisquam, facere deleniti similique autem itaque voluptatum obcaecati ducimus neque quae fuga maiores error earum cum explicabo, totam repellat 
-                        </p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero molestias, ea recusandae officiis debitis quasi modi blanditiis incidunt voluptas, in eligendi vero possimus. Voluptas omnis similique reprehenderit. Rerum, harum, optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus magni eligendi, dolorem quisquam, facere deleniti similique autem itaque voluptatum obcaecati ducimus neque quae fuga maiores error earum cum explicabo, totam repellat
                     </div>
                 </div>
 
-                <div class="paging_number">
+                <div class="paging_number font-small">
                 <a href="">이전</a>
                 <a href="">1</a>
                 <a href="">2</a>
@@ -573,20 +692,23 @@
 
             <div class="tap" id="mine_picture">
 
-                <div class="aline_right">
+                <div class="write">
                     <button>글쓰기</button>
                 </div>
                 
                 <div class="listed_content">
                     <img src="" alt="요리자랑 사진">                
                     <div>
-                        <span class="headline">글 제목의 길이를 늘려보게따 한 이정도쯤? 이정도?</span>
+                        <div class="headline">글 제목의 길이를 늘려보게따 한 이정도쯤? 이정도? 더 길게 해보겠다. 더 더더덛~~ 더덕~~ 더더덕~~~더더더~~~~</div>
                         <span class="profile_name">글쓴이</span>
                         <span>2020-02-28</span>
 
                     </div>
-                    <div class="content">글 내용
-                    한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글 한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글 한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나이렇게 쓰다보면 언젠가 끝이 오고 곧 어떤 일이 일어나는데 내용은 계속 이어지지만 곧 이 글은 잘리고 맙니다 그런데 써야하는 글이 너무 많은 것이다 지금쯤 잘렸으려나 그러타
+                    <div class="content">
+                    
+                        글 내용
+                        한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글 한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글 한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나르니ㅡ아ㅡㄹㄴ아ㅣ긓한글한글하느글나이렇게 쓰다보면 언젠가 끝이 오고 곧 어떤 일이 일어나는데 내용은 계속 이어지지만 곧 이 글은 잘리고 맙니다 그런데 써야하는 글이 너무 많은 것이다 지금쯤 잘렸으려나 그러타
+                    
                     </div>
                 </div>
                 
@@ -594,15 +716,15 @@
                     <img src="" alt="요리자랑 사진">                
                     <div>
                        <div>
-                           <span class="headline">테스트용 글 추가</span>
+                           <div class="headline">테스트용 글 추가</div>
                             <span class="profile_name">글쓴이</span>
+                            <span>2020-03-04</span>
                        </div>
                         
-                        <span>2020-03-04</span>
 
                     </div>
                     <div class="content">글 내용
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed suscipit harum nemo aliquid alias facere fugiat quae. Animi, odio, voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum perspiciatis obcaecati eaque veritatis ullam aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea, non corporis! Voluptates distinctio aliquid numquam, expedita incidunt illo impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aut dignissimos. Eos, a, expedita! Sequi sed accusamus beatae eaque eveniet.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed suscipit harum nemo aliquid alias facere fugiat quae. Animi, odio, voluptatibus? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum perspiciatis obcaecati eaque veritatis ullam aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ea, non corporis! Voluptates distinctio aliquid numquam, expedita incidunt illo impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aut dignissimos. Eos, a, expedita! Sequi sed accusamus beatae eaque eveniet.
                     </div>
                 </div>
 
