@@ -105,7 +105,7 @@
             height: 70px;
             border-radius: 50%;
             margin-right: 20px;
-            border: 1.5px solid gray;
+            border: 1.5px solid dimgray;
         }
         
         .big_input {
@@ -211,6 +211,15 @@
             h1 {
                 display: inline-block;
             }
+            .selected_situation {
+                width: 50px;
+            }
+            .situation_icon {
+                margin-right: 15px;
+            }
+            .situation_icon:nth-last-child(1) {
+                margin:0;
+            }
             .select_option {
                 width: auto;
                 display: inline-block;
@@ -268,8 +277,8 @@
                 display: inline-block;
                 width: 400px;
             }
-            .situation_icon:nth-child(1) {
-                margin-left: 20px; 
+          .situation_icon:nth-child(4) {
+                margin-right: 0;
             }
             .situation_icon:nth-last-child(1) {
                 margin-right: 0;
@@ -360,12 +369,16 @@
                 text-align:center;
                 font-weight: bold;
                 font-size: 0.875rem;
+                line-height: 1.25rem;
                 margin: 0px;
+                padding-top: 8px;
+                padding-bottom: 8px;
                 display: block;
             }    
             .menu_box_ li {
                 display: inline-block;
-                margin-right:60px;
+                text-align: center;
+                width: 40px;
             }
             
             h1:before{
@@ -374,7 +387,7 @@
                 content: "검색결과\A토마토, 파스타면, 참치, 간장/-기름";
                 white-space: pre;
                 width: 100%;
-                font-size: 1.875rem;
+                font-size: 2rem;
                 line-height: 3rem;
                 font-weight: bold;
                 text-align: center;
