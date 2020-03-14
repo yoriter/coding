@@ -175,29 +175,38 @@
         }
         
         .food_list {
-            max-width: 1300px;
+            max-width: 1200px;
             height: auto;
             margin: 0 auto;
-            display: block;
             text-align: center;
+            border: 1px solid red;
         }
-        .food_information {
-            width: 250px;
+        .food_info {
+            width: 250px; 
             height: 480px;
+            display: inline-block;
+            margin: 0 auto;
             margin: 20px;
-            display: inline-block;
-            text-align: center;
+            border: 1px solid orange;
          }
-        .big_information {
+        
+        .big_info {
             width: 230px;
-            height: 330px;
+            height: 150px;
             display: inline-block;
-            text-align: center;
+            border: 1px solid lightgreen;
+        }
+        .ingredient_info {
+            width: 200px;
+            height: 100px;
+            display: inline-block;
+            word-break: keep-all;
+            border: 1px solid skyblue;
+            vertical-align: middle;
         }
         .food_img {
             width: 200px;
             height: 200px;
-            display: inline-block;
         }
         
         @media (max-width: 1200px) {
@@ -256,7 +265,7 @@
             h1:before{
                 visibility: visible;
                 display: inline-block;
-                content: "검색결과\A토마토, 파스타면, 참치, 간장/-기름";
+                content: "검색결과\A김치, 햄, 계란, 김, 파스타면/ -들기름";
                 white-space: pre;
                 width: 100%;
                 font-size: 1.875rem;
@@ -384,7 +393,7 @@
             h1:before{
                 visibility: visible;
                 display: inline-block;
-                content: "검색결과\A토마토, 파스타면, 참치, 간장/-기름";
+                content: "검색결과\A검색결과: 김치, 햄, 계란, 김, 파스타면/ -들기름";
                 white-space: pre;
                 width: 100%;
                 font-size: 2rem;
@@ -497,7 +506,7 @@
         </div>
         
         <div id="result">
-            <h1> 검색결과: 토마토, 파스타면, 참치, 간장/-기름</h1>
+            <h1>검색결과: 김치, 햄, 계란, 김, 파스타면/-들기름</h1>
     
             <div class="select_option">
                 <div class="selected_situation">상황</div>
@@ -509,13 +518,13 @@
                     <img src="picture/baby_food.jpg"         class="situation_icon" alt="이유식">
                     <img src="picture/diet_food.jpg" class="situation_icon" alt="다이어트 음식">
                     <img src="picture/healthy_food.jpg"         class="situation_icon" alt="보양식">
-                    <img src="picture/extra.jpg"         class="situation_icon" alt="음식목록보기">
-                    
+                    <img src="picture/extra.jpg"         class="situation_icon" alt="음식목록보기"> 
                 </div>
             </div>
        
             <div class="select_option">   
-                <div class="selected_ingredient">포함할 재료
+                <div class="selected_ingredient">
+                포함할 재료
                 </div>
                 <div class="small_input">
                     <input type="text" placeholder="재료명">
@@ -524,15 +533,18 @@
             </div>
 
             <div class="select_ingredient_name">
-                    <div class="fruit_tag">토마토</div>
-                    <div class="flour_tag">파스타면</div>
-                    <div class="seafood_tag">참치</div>
-                    <div class="extra_tag">간장</div>
+                <div class="vegetable_tag">김치</div>
+                <div class="meat_tag">햄</div>
+                <div class="meat_tag">계란</div>
+                <div class="flour_tag">파스타면</div>
+                <div class="seafood_tag">김</div>
             </div>
             
             
             <div class="select_option">
-                <div class="selected_ingredient">포함하지 않을 재료</div>
+                <div class="selected_ingredient">
+                포함하지 않을 재료
+                </div>
                 <div class="small_input">
                     <input type="text" placeholder="재료명">
                     <button>검색</button>
@@ -540,7 +552,7 @@
             </div>
             <div class="select_ingredient_name">
                 <div class=name_tag>
-                    <div class="extra_tag">기름</div>
+                    <div class="extra_tag">들기름</div>
                 </div>  
             </div>  
         </div>
@@ -554,87 +566,237 @@
         </div>
     
         <div class="food_list">
-            <div class="food_information">
-                <div class="big_information"><a href="">
-                    <img src="음식 이미지" alt="음식이미지" class="food_img">
-                    <h2>토마토 파스타</h2>
-                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
-                </div>
-                    <h4><div class="fruit_tag">토마토</div>
-                        <div class="flour_tag">파스타면</div></h4> 
-                </div>
-            
-            <div class="food_information">
-                <div class="big_information"><a href="">
-                    <img src="음식 이미지" alt="음식이미지" class="food_img">
-                    <h2>토마토 파스타</h2>
-                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
-                </div>
-                    <h4><div class="fruit_tag">토마토</div>
-                        <div class="flour_tag">파스타면</div></h4> 
-                </div>
-                
-            <div class="food_information">
-                <div class="big_information"><a href="">
-                    <img src="음식 이미지" alt="음식이미지" class="food_img">
-                    <h2>토마토 파스타</h2>
-                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
-                </div>
-                    <h4><div class="fruit_tag">토마토</div>
-                        <div class="flour_tag">파스타면</div></h4> 
-                </div>
-                
-            <div class="food_information">
-                <div class="big_information"><a href="">
-                    <img src="음식 이미지" alt="음식이미지" class="food_img">
-                    <h2>토마토 파스타</h2>
-                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
-                </div>
-                    <h4><div class="fruit_tag">토마토</div>
-                        <div class="flour_tag">파스타면</div></h4> 
-                </div>
-                
-            <div class="food_information">
-                <div class="big_information"><a href="">
-                    <img src="음식 이미지" alt="음식이미지" class="food_img">
-                    <h2>토마토 파스타</h2>
-                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
-                </div>
-                    <h4><div class="fruit_tag">토마토</div>
-                        <div class="flour_tag">파스타면</div></h4> 
-                </div>
-            
-            <div class="food_information">
-                <div class="big_information"><a href="">
-                    <img src="음식 이미지" alt="음식이미지" class="food_img">
-                    <h2>토마토 파스타</h2>
-                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
-                </div>
-                    <h4><div class="fruit_tag">토마토</div>
-                        <div class="flour_tag">파스타면</div></h4> 
-                </div>
-                
-            <div class="food_information">
-                <div class="big_information"><a href="">
-                    <img src="음식 이미지" alt="음식이미지" class="food_img">
-                    <h2>토마토 파스타</h2>
-                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
-                </div>
-                    <h4><div class="fruit_tag">토마토</div>
-                        <div class="flour_tag">파스타면</div></h4> 
-                </div>
-                
-            <div class="food_information">
-                <div class="big_information"><a href="">
-                    <img src="음식 이미지" alt="음식이미지" class="food_img">
-                    <h2>토마토 파스타</h2>
-                    <h3>진부하게 맛있는 맛 <p>솔직히 평생요리</p></h3></a>
-                </div>
-                    <h4><div class="fruit_tag">토마토</div>
-                        <div class="flour_tag">파스타면</div></h4> 
-                </div>
+            <div class="food_info">
+                    <img src="picture/%EA%B3%84%EB%9E%80%EC%B0%9C.jpg" alt="게란찜" class="food_img">
+                    <div class="big_info">
+                    <a href="">
+                        <h2>계란찜</h2>
+                        <h3>수분 많고 따뜻한 건강식 <p>속이 편안한 맛</p></h3>
+                    </a>
+                    </div>
+                    <div class="ingredient_info">
+                        <h4>
+                            <span class="meat_tag">계란</span>
+                            <span class="extra_tag">소금</span>
+                            <span class="extra_tag">참기름</span>
+                        </h4> 
+                    </div>
             </div>
+            
+            <div class="food_info">
+                <img src="picture/%ED%86%A0%EB%A7%88%ED%86%A0_%ED%8C%8C%EC%8A%A4%ED%83%80.jpg" alt="토마토 파스타" class="food_img">
+                <div class="big_info">
+                <a href="">
+                    <h2>토마토 파스타</h2>
+                    <h3>꾸준히 사랑받는 음식<p>토마토가 씹히는 건강한 맛</p></h3>
+                </a>
+                </div>
+                    <div class="ingredient_info">
+                    <h4>
+                       <span class="fruit_tag">토마토</span>
+                       <span class="flour_tag">파스타면</span>
+                       <span class="fruit_tag">양파</span>
+                       <span class="extra_tag">올리브유</span>
+                       <span class="extra_tag">소금</span>
+                    </h4>
+                    </div>
+                </div>
+                
+                
+            <div class="food_info">
+                <img src="picture/%EA%B9%80%EC%B9%98_%EB%B3%B6%EC%9D%8C%EB%B0%A5.jpg" alt="김치 볶음밥" class="food_img">
+                <div class="big_info">
+                <a href="">
+                    <h2>김치 볶음밥</h2>
+                    <h3>가볍게 먹을 수 있는 맛있는 맛<p>질리지 않는 음식</p></h3>
+                </a>
+                </div>
+                    <div class="ingredient_info">
+                    <h4>
+                        <span class="vegetable_tag">배추김치</span>
+                        <span class="meat_tag">계란</span>
+                        <span class="meat_tag">햄</span>
+                        <span class="seafood_tag">김</span>
+                        <span class="vegetable_tag">양파</span>
+                        <span class="rice_tag">밥</span>
+                        <span class="extra_tag">설탕</span>
+                        <span class="extra_tag">식용유</span>
+                        <span class="extra_tag">참기름</span>
+                    </h4>
+                    </div>
+                </div>
+                
+            <div class="food_info">
+                    <img src="picture/%EA%B9%80%EB%B0%A5.jpg" alt="김치 김밥" class="food_img">
+                    <div class="big_info">
+                    <a href="">
+                        <h2>김치 김밥</h2>
+                        <h3>한 끼로 든든한 음식<p>도시락으로도 좋아요</p></h3>
+                    </a>
+                    </div>
+                    <div class="ingredient_info">
+                    <h4>
+                        <span class="vegetable_tag">배추김치</span>
+                        <span class="seafood_tag">김</span>
+                        <span class="meat_tag">계란</span>
+                        <span class="meat_tag">햄</span>
+                        <span class="vegetable_tag">당근</span>
+                        <span class="rice_tag">밥</span>
+                        <span class="extra_tag">설탕</span>
+                        <span class="extra_tag">참기름</span>
+                    </h4>
+                    </div>
+                </div>
+                
+            <div class="food_info">
+                    <img src="picture/%EB%B0%A5%EB%B2%84%EA%B1%B0.jpg" alt="김치 밥버거" class="food_img">
+                    <div class="big_info">
+                    <a href="">
+                        <h2>햄김치 밥버거</h2>
+                        <h3>하나만 먹어도 든든한 밥버거<p>쉽게 만들 수 있    어요</p></h3>
+                    </a>
+                    </div>
+                    <div class="ingredient_info">
+                    <h4>
+                        <span class="vegetable_tag">배추김치</span>
+                        <span class="seafood_tag">김</span>
+                        <span class="meat_tag">계란</span>
+                        <span class="meat_tag">햄</span>
+                        <span class="rice_tag">밥</span>
+                        <span class="extra_tag">설탕</span>
+                        <span class="extra_tag">깨</span>
+                        <span class="extra_tag">식용유</span>
+                        <span class="extra_tag">참기름</span>
+                    </h4>
+                    </div>
+                </div>
+            
+            <div class="food_info">
+                    <img src="picture/%EA%B9%80%EC%B9%98%EC%A0%84.jpg" alt="김치전" class="food_img">
+                    <div class="big_info">
+                    <a href="">
+                        <h2>김치전</h2>
+                        <h3>비오는 날 생각나는 전<p>다양한 음식과 어울리는 맛</p></h3>
+                    </a>
+                    </div>
+                    <div class="ingredient_info">
+                    <h4>
+                        <span class="vegetable_tag">배추김치</span>
+                        <span class="meat_tag">달걀</span>
+                        <span class="flour_tag">밀가루</span>
+                        <span class="extra_tag">식용유</span>
+                        <span class="extra_tag">참기름</span>
+                    </h4>
+                    </div>
+                </div>
+                
+            <div class="food_info">
+                    <img src="picture/%EA%B9%80%EC%B9%98%EC%B0%9C.jpg" alt="김치찜" class="food_img">
+                    <div class="big_info">
+                    <a href="">
+                        <h2>김치찜</h2>
+                        <h3>개운하고 매콤한 맛<p>따뜻하게 먹으면 더 맛있어요</p></h3>
+                    </a>
+                    </div>
+                    <div class="ingredient_info">
+                    <h4>
+                        <span class="vegetable_tag">배추김치</span>
+                        <span class="vegetable_tag">김치국물</span>
+                        <span class="meat_tag">햄</span>
+                    </h4>
+                    </div>
+                </div>
+                
+            <div class="food_info">
+                    <img src="picture/%EA%B3%84%EB%9E%80%ED%94%84%EB%9D%BC%EC%9D%B4.jpg" alt="계란프라이" class="food_img">
+                    <div class="big_info"><a href="">
+                        <h2>계란프라이</h2>
+                        <h3>누구나 도전해볼만 음식<p>건강하고도 맛있는 요리</p></h3>
+                        </a>
+                    </div>
+                    <div class="ingredient_info">
+                    <h4>
+                        <span class="meat_tag">계란</span>
+                        <span class="extra_tag">식용유</span>
+                    </h4>
+                    </div>
+                </div>
+                
+            <div class="food_info">
+                    <img src="picture/%EC%82%B6%EC%9D%80_%EB%8B%AC%EA%B1%80.jpg" alt="삶은 달걀" class="food_img">
+                    <div class="big_info"><a href="">
+                        <h2>삶은 달걀</h2>
+                        <h3>물만 있으면 만들 수 있는 요리<p>따뜻할 때 먹으면 더 맛있어요</p></h3></a>
+                    </div>
+                    <div class="ingredient_info">
+                    <h4>
+                        <span class="meat_tag">계란</span>
+                    </h4>
+                    </div>
+                </div>
+                
+            <div class="food_info">
+                    <img src="picture/%EC%95%BC%EC%B1%84%EA%B3%84%EB%9E%80%EB%A7%90%EC%9D%B4.jpg" alt="야채 계란말이" class="food_img">
+                    <div class="big_info">
+                    <a href="">
+                        <h2>야채 계란말이</h2>
+                        <h3>귀엽고 맛있는 음식<p>건강과 맛을 동시에 챙길 수 있어요</p></h3>
+                    </a>
+                    </div>
+                    <div class="ingredient_info">
+                    <h4>
+                        <span class="meat_tag">계란</span>
+                        <span class="vegetable_tag">대파</span>
+                        <span class="extra_tag">소금</span>
+                        <span class="extra_tag">식용유</span>
+                    </h4>
+                    </div>
+                </div>
+                
+            <div class="food_info">
+                    <img src="picture/%ED%81%AC%EB%A6%BC_%ED%8C%8C%EC%8A%A4%ED%83%80.jpg" alt="크림파스타" class="food_img">
+                    <div class="big_info">
+                    <a href="">
+                        <h2>크림파스타</h2>
+                        <h3>집에서도 만들기 쉬운 파스타<p>많은 사람에게 사랑받는 요리</p></h3>
+                    </a>
+                    </div>
+                    <div class="ingredient_info">
+                    <h4>
+                        <span class="flour_tag">파스타면</span>
+                        <span class="flour_tag">밀가루</span>
+                        <span class="meat_tag">햄</span>
+                        <span class="meat_tag">베이컨</span>
+                        <span class="dairy_product_tag">우유</span>
+                        <span class="vegetable_tag">브로콜리</span>
+                        <span class="vegetable_tag">마늘</span>
+                        <span class="vegetable_tag">양파</span>
+                        <span class="extra_tag">소금</span>
+                        <span class="extra_tag">후추</span>
+                        <span class="extra_tag">올리브유</span>
+                    </h4>
+                    </div>
+                </div>
+                
+            <div class="food_info">
+                    <img src="picture/%ED%96%84%EC%BD%98%EC%B9%98%EC%A6%88.jpg" alt="햄콘치즈" class="food_img">
+                    <div class="big_info">
+                    <a href="">
+                        <h2>햄콘치즈</h2>
+                        <h3>고소하고 중독성 있는 맛<p>쉽게 만들 수 있어요</p></h3>
+                    </a>
+                    </div>
+                    <div class="ingredient_info">
+                    <h4>
+                        <span class="meat_tag">햄</span>
+                        <span class="dairy_product_tag">모짜렐라 치즈</span>
+                        <span class="processed_food_tag">스위트 콘</span>
+                        <span class="extra_tag">칠리소</span>
+                    </h4>
+                    </div>
+                </div>
+                
         </div>
-
+        </div>
     </body>
 </html>
