@@ -99,6 +99,7 @@
         }
         .every_icon {
                 display: inline-block;
+                width: 100%;
         }
         .situation_icon {
             vertical-align: middle;
@@ -182,7 +183,6 @@
             height: auto;
             margin: 0 auto;
             text-align: center;
-            border: 1px solid red;
         }
         .food_info {
             width: 250px; 
@@ -190,21 +190,18 @@
             display: inline-block;
             margin: 0 auto;
             margin: 20px;
-            border: 1px solid orange;
          }
         
         .big_info {
             width: 230px;
             height: 150px;
             display: inline-block;
-            border: 1px solid lightgreen;
         }
         .ingredient_info {
             width: 200px;
             height: 100px;
             display: inline-block;
             word-break: keep-all;
-            border: 1px solid skyblue;
             vertical-align: middle;
         }
         .food_img {
@@ -287,7 +284,7 @@
             }
             .every_icon {
                 display: inline-block;
-                width: 400px;
+                max-width: 400px;
             }
           .situation_icon:nth-child(4) {
                 margin-right: 0;
@@ -323,7 +320,6 @@
         @media (max-width: 600px) {
             .logo_cover {
                 display: inline-block;
-                border: 1px solid pink;
                 float: left;
                 margin: 10px;
             }
@@ -334,9 +330,11 @@
                 vertical-align: middle;
             }
             
+            #result {
+                width: 100%;
+            }
             .big_input {
                 display: inline-block;
-                border: 1px solid pink;
                 /*필수*/
                 float: left;
                 /*float를 쓰면 뭔가 부담스럽게 넓은 틈이 줄어든다*/
@@ -399,6 +397,21 @@
                 margin-right: 0;
             }
             
+            .every_icon {
+                width:100%;
+            }
+            .situation_icon {
+                width: 60px;
+                height: 60px;
+                margin-right: 15px;
+            }
+            .situation_icon:nth-child(4) {
+                margin-right: 0;
+            }
+            .situation_icon:nth-child(8) {
+                margin-right: 0;
+            }
+            
             h1:before{
                 visibility: visible;
                 display: inline-block;
@@ -446,6 +459,9 @@
                 font-size: 0.875rem;
             }
             
+            .food_list {
+                width: 100%;
+            }
             .food_info {
                 width: 90%;
                 height: auto;
@@ -459,16 +475,12 @@
                 width: 140px;
                 height: 140px;
                 margin: 5px;
-                border: 1px solid pink;
                 float: left;
             }
             .ingredient_info {
                 width: 50%;
                 height: auto;
                 float: right;
-            }
-            h3>p {
-                margin: 0;
             }
             h2 {
                 font-size: 1rem;
@@ -479,7 +491,11 @@
                 display: inline-block;
                 font-size: 0.75rem;
                 margin: 0 auto;
+                margin-bottom: 15px;
                 line-height: 1.2rem;
+            }
+            h3>p {
+                margin: 0;
             }
             h4 {
                 display: inline-block;
