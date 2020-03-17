@@ -17,7 +17,6 @@
             background-color: lightgray; 
         }        
         .position_mid {
-            float: none;
             background-color: white;
             max-width: 1400px;
             height: auto;
@@ -25,23 +24,24 @@
         }
 
         a {
-            text-decoration: none; color: black;
+            text-decoration: none; 
+            color: black;
         }
         #logo {
             width: 250px;
             height: 250px;
-            display:block;
             padding-top: 60px;
             margin: 0px auto;
+            display:block;
         }
    
-        
         .menu_ {
             width: 900px;
-            line-height: 55px;
             margin: 0 auto;
             margin-top: 60px;
             margin-bottom: 40px;
+            /*흠*/
+            line-height: 55px;
             background-color: lightgray;
             display:none;
         }      
@@ -51,10 +51,8 @@
             font-weight: bold;
             font-size: 1.25rem;
             margin: 0px;
-            display:none;
         }    
         .menu_box_ li {
-            display:none;
             margin-right:60px;   
         }
 
@@ -102,11 +100,11 @@
                 width: 800px;
         }
         .situation_icon {
-            vertical-align: middle;
             width: 70px;
             height: 70px;
-            border-radius: 50%;
             margin-right: 20px;
+            vertical-align: middle;
+            border-radius: 50%;
             border: 1.5px solid dimgray;
         }
         
@@ -199,6 +197,7 @@
             height: 100px;
             display: inline-block;
             word-break: keep-all;
+            /*신기*/
             vertical-align: middle;
         }
         .food_img {
@@ -206,16 +205,17 @@
             height: 200px;
         }
         
+        /*979px~1200px에 적용?*/
         @media (max-width: 1200px) {
             .position_mid {
                 width: 100%;
             }
+            .manu_box {
+                max-width: 860px;
+            }
             #result {
                 padding-left: 0;
                 max-width: 780px;
-            }
-            h1 {
-                display: inline-block;
             }
             .selected_situation {
                 width: 50px;
@@ -239,9 +239,6 @@
                 margin: 0 auto;
                 max-width: 1000px;
             }
-            .manu_box {
-                max-width: 860px;
-            }
         }
         
         @media (max-width: 978px) {
@@ -253,12 +250,11 @@
             #result {
                 padding-left: 0;
                 max-width: 780px;
-                
             }
             h1 {
                 visibility: hidden;
             }
-            h1:before{
+            h1::before{
                 visibility: visible;
                 display: inline-block;
                 content: "검색결과\A김치, 햄, 계란, 김, 파스타면/ -들기름";
@@ -271,17 +267,15 @@
             }
             .selected_situation {
                 display: block;
-                width: 100%;
                 height: 60px;
-                line-height: 60px;
                 margin: 0 auto;
-                text-align: center;
+                line-height: 60px;
                 font-size: 1.5rem;
             }
             .every_icon {
                 max-width: 400px;
             }
-          .situation_icon:nth-child(4) {
+            .situation_icon:nth-child(4) {
                 margin-right: 0;
             }
             .situation_icon:nth-last-child(1) {
@@ -297,7 +291,7 @@
                 width: 270px;
             }
             .selected_ingredient {
-                text-align:left;
+                text-align: left;
             }
             .select_ingredient_name {
                 margin-left: 38%;
@@ -337,16 +331,10 @@
                 margin-bottom: 0px;
             }    
             button {
-                max-width: 90px;
+                width: 50px;
             }
             
             .menu {
-                display: none;
-            }
-            ul.menu_box {
-                display: none;
-            }
-            .menu_box li {
                 display: none;
             }
 
@@ -384,7 +372,7 @@
             }
             
             .every_icon {
-                width:340px;
+                width: 340px;
             }
             .situation_icon {
                 width: 60px;
@@ -399,15 +387,6 @@
             }
             
             h1:before{
-                visibility: visible;
-                display: inline-block;
-                content: "검색결과\A검색결과: 김치, 햄, 계란, 김, 파스타면/ -들기름";
-                white-space: pre;
-                width: 100%;
-                font-size: 2rem;
-                line-height: 3rem;
-                font-weight: bold;
-                text-align: center;
                 margin:0;
                 font-size: 1.125rem;
                 word-break: keep-all;
@@ -473,24 +452,25 @@
                 float: right;
             }
             h2 {
-                font-size: 1rem;
                 padding-top: 5px;
+                font-size: 1rem;
                 text-align: center;
             }
             h3 {
                 display: inline-block;
-                font-size: 0.75rem;
                 margin: 0 auto;
                 margin-bottom: 15px;
                 line-height: 1.2rem;
+                font-size: 0.75rem;
             }
             h3>p {
                 margin: 0;
             }
             h4 {
                 display: inline-block;
-                font-size: 0.75rem;
                 margin: 0 auto;
+                padding: 5px;
+                font-size: 0.75rem;
             }
         }
     </style>
