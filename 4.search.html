@@ -79,7 +79,7 @@
         }
         
         .select_option{
-            height: 100px;
+            height: auto;
             line-height: 100px;
         }
         
@@ -99,7 +99,7 @@
         }
         .every_icon {
                 display: inline-block;
-                width: 100%;
+                width: 800px;
         }
         .situation_icon {
             vertical-align: middle;
@@ -110,41 +110,38 @@
             border: 1.5px solid dimgray;
         }
         
-        .big_input {
+        .search_cover {
             width: 500px;
-            height: auto;
             margin: 0 auto;
-            margin-bottom: 40px;
         }
-        .big_input input {
+        .big_input {
             width: 400px;
             height: 39px;
+            margin: 0 auto;
+            margin-bottom: 40px;
             text-align: center;
             font-size: 1rem;
-        }    
+        }
         
         #result {
-            display:block;
             margin: 0 auto;
             padding-left: 200px;
             padding-bottom: 40px;
         }
         
         .small_input {
-            display:inline-block;
-            height: 45px;
-        }
-        .small_input input {
             width: 300px;
             height: 39px;
             text-align: center;
             font-size: 1rem
         }
+
         button {
-            width:90px;
+            width: 90px;
             height: 45px;
             line-height: 37px;
             text-align: center;
+            font-size: 1rem
         }
         
         .select_ingredient_name {
@@ -227,11 +224,10 @@
                 margin-right: 15px;
             }
             .situation_icon:nth-last-child(1) {
-                margin:0;
+                margin: 0;
             }
             .select_option {
                 width: auto;
-                display: inline-block;
                 margin: 0 auto;
             }
             .how_much_location {
@@ -283,7 +279,6 @@
                 font-size: 1.5rem;
             }
             .every_icon {
-                display: inline-block;
                 max-width: 400px;
             }
           .situation_icon:nth-child(4) {
@@ -321,7 +316,7 @@
             .logo_cover {
                 display: inline-block;
                 float: left;
-                margin: 10px;
+                margin: 25px;   
             }
             #logo {
                 width: 60px;
@@ -333,25 +328,16 @@
             #result {
                 width: 100%;
             }
-            .big_input {
-                display: inline-block;
-                /*필수*/
-                float: left;
-                /*float를 쓰면 뭔가 부담스럽게 넓은 틈이 줄어든다*/
-                width:auto;
-                padding-top: 20px;
-
-            }    
-            .big_input input {
-                height: 39px;
-                max-width: 250px;
+            .search_cover {
+                width: 100%;
             }
+            .big_input {
+                width: 200px;
+                margin-top: 35px;
+                margin-bottom: 0px;
+            }    
             button {
-                width: 45px;
-                height: 45px;
-                line-height: 45px;
-                font-size: 1px;
-                float: left;
+                max-width: 90px;
             }
             
             .menu {
@@ -398,7 +384,7 @@
             }
             
             .every_icon {
-                width:100%;
+                width:340px;
             }
             .situation_icon {
                 width: 60px;
@@ -465,6 +451,10 @@
             .food_info {
                 width: 90%;
                 height: auto;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border: 1px solid lightgray;
+                border-radius: 10px;
             }
             .big_info {
                 width: 50%;
@@ -474,7 +464,7 @@
             .food_img {
                 width: 140px;
                 height: 140px;
-                margin: 5px;
+                margin: 10px;
                 float: left;
             }
             .ingredient_info {
@@ -521,10 +511,12 @@
                 <li><a href="">마이 페이지</a></li>
             </ul>
         </div>
-        <div class="big_input"> 
-            <input type="text" placeholder="음식명/재료명 재검색">
-            <button>검색</button>
-        </div>
+        
+            <div class="search_cover">
+                <input type="text" placeholder="음식명/재료명 재검색" class="big_input">
+                <button>검색</button>
+            </div>
+            
         <div class="menu_">
             <ul class="menu_box_">
                 <li><a href="">요리 목록</a></li>
@@ -556,10 +548,9 @@
                 <div class="selected_ingredient">
                 포함할 재료
                 </div>
-                <div class="small_input">
-                    <input type="text" placeholder="재료명">
-                    <button>검색</button>
-                </div>  
+                
+                <input type="text" placeholder="재료명" class="small_input">
+                <button>검색</button>
             </div>
 
             <div class="select_ingredient_name">
@@ -575,10 +566,8 @@
                 <div class="selected_ingredient">
                 포함하지 않을 재료
                 </div>
-                <div class="small_input">
-                    <input type="text" placeholder="재료명">
-                    <button>검색</button>
-                </div>  
+                <input type="text" placeholder="재료명" class="small_input">
+                <button>검색</button> 
             </div>
             <div class="select_ingredient_name">
                 <div class=name_tag>
