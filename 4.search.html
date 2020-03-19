@@ -6,21 +6,19 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="font/font.css">
     <link rel="stylesheet" href="ingredient.css">
-    <!--<link href="css/bootstrap.min.css" rel="stylesheet"> 이 태그가 있으니까 화면이 찌그러지네..-->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet"> 이 태그가 있으니까 화면이 찌그러진-->
     <title>검색결과 - 요리터</title>
     <style>
         body {
             font-family: 'NanumGothic-Regular','NanumGothic';
-            margin: 0
+            margin: 0;
         }
         html, body {
-            height: 100%;
             background-color: lightgray; 
         }        
         .position_mid {
             background-color: white;
             max-width: 1400px;
-            height: auto;
             margin: 0 auto;
         }
 
@@ -28,34 +26,17 @@
             text-decoration: none; 
             color: black;
         }
+
         #logo {
             width: 250px;
             height: 250px;
-            padding-top: 60px;
-            margin: 0px auto;
+            margin: 60px auto 0;
             display: block;
         }
    
         .menu_ {
-            width: 900px;
-            margin: 0 auto;
-            margin-top: 60px;
-            margin-bottom: 40px;
-            /*흠*/
-            line-height: 55px;
-            background-color: lightgray;
             display:none;
         }      
-        ul.menu_box_ {
-            list-style-type: none;
-            text-align:center;
-            font-weight: bold;
-            font-size: 1.25rem;
-            margin: 0px;
-        }    
-        .menu_box_ li {
-            margin-right:60px;   
-        }
 
         .menu {
             width: 900px;
@@ -70,7 +51,7 @@
             text-align:center;
             font-weight: bold;
             font-size: 1.25rem;
-            margin: 0px;
+
         }    
         .menu_box li {
             display: inline;
@@ -341,35 +322,31 @@
 
             .menu_ {
                 width: 100%;
-                line-height: 55px;
-                margin: 0 auto;
-                margin-top: 60px;
-                margin-bottom: 40px;
-                background-color: lightgray;
+                margin: 40px auto 40px;
                 display: block;
                 clear: both;
+                background-color: lightgray;
             }      
             ul.menu_box_ {
+                width: 100%;
+                margin: 40px auto 40px;
+                padding: 8px 0px;
+                display: block;
+                clear: both;
+                background-color: lightgray;
                 list-style-type: none;
                 text-align:center;
-                font-weight: bold;
-                font-size: 0.875rem;
-                line-height: 1.25rem;
-                margin: 0px;
-                padding-top: 8px;
-                padding-bottom: 8px;
-                padding-left: 0;
-                display: block;
             }    
             .menu_box_ li {
                 width: 40px;
                 display: inline-block;
                 text-align: center;
                 word-break: keep-all;
-                margin-right: 32px;
-            }
-            .menu_box_ li:nth-last-child(1) {
-                margin-right: 0;
+                margin-left: 16px;
+                margin-right: 16px;
+                font-weight: bold;
+                line-height: 1.25rem;
+                font-size: 0.875rem;
             }
             
             .every_icon {
@@ -480,9 +457,7 @@
   
     <body>
         <div class="position_mid">
-            <div class="logo_cover">
                 <a href=""><img src="picture/logo.jpg" alt="로고" id="logo"></a>
-            </div>
         <div class="menu">
             <ul class="menu_box">
                 <li><a href="">요리 목록</a></li>
