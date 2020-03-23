@@ -9,29 +9,31 @@
     <!--<link href="css/bootstrap.min.css" rel="stylesheet"> 이 태그가 있으니까 화면이 찌그러진다..-->
     <title>검색결과 - 요리터</title>
     <style>
+        html {
+            background-color: lightgray; 
+        }
         body {
             font-family: 'NanumGothic-Regular','NanumGothic';
-            margin: 0;
-        }
-        html, body {
-            background-color: lightgray; 
-        }        
-        .position_mid {
-            background-color: white;
             max-width: 1400px;
-            margin: 0 auto;
+            height: 100%;
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white; 
         }
-
+        header {
+            max-width: 1400px;
+            margin: 0;
+            text-align: center;
+        }
         a {
             text-decoration: none; 
             color: black;
         }
-
         #logo {
             width: 250px;
             height: 250px;
-            margin: 60px auto 0;
-            display: block;
+            margin: 60px auto 0px;
         }  
 
         nav {
@@ -40,28 +42,24 @@
             line-height: 55px;
             background-color: lightgray;
         }      
-        
         nav:last-of-type {
             display:none;
-        }
-        
+        } 
         ul.menu_box {
             list-style-type: none;
             text-align:center;
             font-weight: bold;
             font-size: 1.25rem;
-
         }    
         .menu_box li {
             display: inline;
             margin-right:60px;
         }
-        
+
         .select_option {
             height: auto;
             line-height: 100px;
         }
-        
         .selected_situation {
             display: inline-block;
             width: 100px;
@@ -89,11 +87,7 @@
             border: 1.5px solid dimgray;
         }
         
-        .search_cover {
-            width: 500px;
-            margin: auto;
-        }
-        .big_input {
+        #main_q {
             width: 400px;
             height: 39px;
             margin: auto;
@@ -143,6 +137,7 @@
             font-size: 1.875rem;
         }      
         h2 {
+            margin: 10px;
             font-size: 1.5rem;
         }
         h3 {
@@ -182,6 +177,12 @@
         .food_img {
             width: 200px;
             height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        article {
+            border: 1px solid lightgray;
+            border-radius: 10px;
         }
         
         @media (max-width: 1200px) {
@@ -224,6 +225,7 @@
                 max-width: 780px;
             }
             h1 {
+                font-size: 0;
                 visibility: hidden;
             }
             h1:before{
@@ -274,32 +276,32 @@
         }
 
         @media (max-width: 600px) {
-            .logo_cover {
-                display: inline-block;
-                float: left;
-                margin: 25px;   
-            }
             #logo {
                 width: 60px;
                 height: 60px;
                 padding: 0px;
+                margin: 20px 30px; 
+                float: left; 
+                vertical-align: middle;
+            }
+            #main_q {
+                width: 200px;
+                margin-bottom: 0;
+                margin-top: 25px;
+                vertical-align: middle;
+            }    
+            button {
+                width: 50px;
+                margin-top: 25px;
                 vertical-align: middle;
             }
             
             #result {
                 width: 100%;
             }
-            .search_cover {
-                width: 100%;
-            }
-            .big_input {
-                width: 200px;
-            }    
-            button {
-                width: 50px;
-            }
             
             nav {
+                width:0;
                 display: none;
             }
 
@@ -311,7 +313,6 @@
             ul.menu_box {
                 padding: 8px 0;
                 margin: 0 auto 40px;
-                clear: both;
                 background-color: lightgray;
                 list-style-type: none;
                 text-align: center;
@@ -340,12 +341,14 @@
                 font-size: 1.125rem;
                 word-break: keep-all;
             }
+            .select_option {
+                margin-top: 30px;
+            }
             .selected_situation {
                 font-size: 1.125rem;
             }
             .selected_ingredient {
                 height: 60px;
-                padding-top: 50px;
                 margin: auto;
                 text-align: center;
                 display: block;
@@ -353,7 +356,7 @@
             }
             .select_ingredient_name {
                 max-width: 315px;
-                height: 80px;
+                height: 50px;
                 margin: auto;
                 font-size: 0.75rem;
             }
@@ -362,10 +365,16 @@
                 width:250px;
                 height: 45px;
                 line-height: 45px;
+                vertical-align: middle;
             }
             
             .small_input input {
                 width: 150px;
+                vertical-align: middle;
+            }
+            
+            .small_button {
+                margin-top: 0;
             }
             .how_much {
                 width: 100px;
@@ -376,7 +385,7 @@
             .food_list {
                 width: 100%;
             }
-            .food_info {
+            article {
                 width: 90%;
                 height: auto;
                 padding: 5px 0;
@@ -426,36 +435,32 @@
   
   
     <body>
-        <div class="position_mid">
-            <header>
-                <a href=""><img src="picture/logo.jpg" alt="로고" id="logo"></a>
-            </header>
-        <nav>
-            <ul class="menu_box">
-                <li><a href="">요리 목록</a></li>
-                <li><a href="">인기 요리</a></li>
-                <li><a href="">제철 요리</a></li>
-                <li><a href="">안내 사항</a></li>
-                <li><a href="">마이 페이지</a></li>
-            </ul>
-        </nav>
-        
-            <div class="search_cover">
-                <input type="text" placeholder="음식명/재료명 재검색" class="big_input">
-                <button>검색</button>
-            </div>
+        <header>
+            <a href=""><img src="picture/logo.jpg" alt="로고" id="logo"></a>
+            <nav>
+                <ul class="menu_box">
+                    <li><a href="">요리 목록</a></li>
+                    <li><a href="">인기 요리</a></li>
+                    <li><a href="">제철 요리</a></li>
+                    <li><a href="">안내 사항</a></li>
+                    <li><a href="">마이 페이지</a></li>
+                </ul>
+            </nav>
             
-        <nav>
-            <ul class="menu_box">
-                <li><a href="">요리 목록</a></li>
-                <li><a href="">인기 요리</a></li>
-                <li><a href="">제철 요리</a></li>
-                <li><a href="">안내 사항</a></li>
-                <li><a href="">마이 페이지</a></li>
-            </ul>
-        </nav>
-        
-        <div id="result">
+                    <input type="text" placeholder="음식명/재료명 재검색" id="main_q">
+                    <button>검색</button>
+                
+            <nav>
+                <ul class="menu_box">
+                    <li><a href="">요리 목록</a></li>
+                    <li><a href="">인기 요리</a></li>
+                    <li><a href="">제철 요리</a></li>
+                    <li><a href="">안내 사항</a></li>
+                    <li><a href="">마이 페이지</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="result">
             <h1>검색결과: 김치, 햄, 계란, 김, 파스타면/-들기름</h1>
     
             <div class="select_option">
@@ -478,7 +483,7 @@
                 </div>
                 
                 <input type="text" placeholder="재료명" class="small_input">
-                <button>검색</button>
+                <button class="small_button">검색</button>
             </div>
 
             <div class="select_ingredient_name">
@@ -495,22 +500,23 @@
                 포함하지 않을 재료
                 </div>
                 <input type="text" placeholder="재료명" class="small_input">
-                <button>검색</button> 
+                <button class="small_button">검색</button> 
             </div>
             <div class="select_ingredient_name">
                 <div class=name_tag>
                     <div class="extra_tag">들기름</div>
                 </div>  
             </div>  
-        </div>
+        </section>
         
-        <div class="how_much_location">
-            <select class="how_much">
-                <option value="12개">12개씩 보기</option>
-                <option value="24개">24개씩 보기</option>      
-                <option value="36개">36개씩 보기</option>
-            </select>
-        </div>
+        <section>
+            <div class="how_much_location">
+                <select class="how_much">
+                    <option value="12개">12개씩 보기</option>
+                    <option value="24개">24개씩 보기</option>      
+                    <option value="36개">36개씩 보기</option>
+                </select>
+            </div>
     
         <div class="food_list">
             <article>
@@ -745,7 +751,9 @@
             </article>
                 
         </div>
-        </div>
+        </section>
+        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
     </body>
