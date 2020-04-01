@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="font/font.css">
+    <link rel="stylesheet" href="ingredient.css">
+    <title>인기요리 - 요리터</title>
+    <meta charset="utf-8">
+    <style>
+        html {
+            background-color: lightgray;
+        }
+        body {
+            font-family: 'NanumGothic-Regular','NanumGothic';
+            max-width: 1400px;
+            height: 100%;
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+        }
+        header {
+            max-width: 1400px;
+            margin: 0;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        #logo {
+            width: 250px;
+            height: 250px;
+            display: block;
+            padding-top: 60px;
+            margin: auto;
+            margin-bottom: 60px;
+        }
+        #main_q {
+            width: 400px;
+            height: 39px;
+            margin: auto;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        button {
+            width: 90px;
+            height: 45px;
+            line-height: 37px;
+            text-align: center;
+            font-size: 1rem
+        }
+        nav {
+            width: 900px;
+            margin: 0px auto 40px;
+            line-height: 55px;
+            background-color: lightgray;
+        }
+        ul.menu_box {
+            list-style-type: none;
+            text-align:center;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        .menu_box li {
+            display: inline;
+            margin-right:60px;
+        }
+        
+        @media (max-width: 1200px) {
+            nav {
+                max-width: 860px;
+            }
+            
+        @media (max-width: 978px) {
+            nav {
+                max-width: 500px;
+                word-break: keep-all;
+            }
+            
+        @media (max-width: 600px) {
+            #logo {
+                width: 60px;
+                height: 60px;
+                padding: 20px;
+                margin: auto;
+                display: block;
+            }
+            #main_q {
+                width: 200px;
+                margin-bottom: 0;
+                vertical-align: middle;
+            }
+            button {
+                width: 50px;
+                vertical-align: middle;
+            }
+            nav {
+                display: block;
+                width: 100%;
+                line-height: 0;
+            }
+            ul.menu_box {
+                padding: 8px 0;
+                margin: 0 auto 40px;
+                background-color: lightgray;
+                list-style-type: none;
+                text-align: center;
+            }
+            .menu_box li {
+                width: 40px;
+                margin: 0 10px;
+                display: inline-block;
+                word-break: keep-all;
+                font-weight: bold;
+                line-height: 1.25rem;
+                font-size: 0.875rem;
+            }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href=""><img src="picture/logo.jpg" alt="로고" id="logo"></a>
+            <input type="text" placeholder="음식명/재료명 재검색" id="main_q">
+            <button>검색</button>
+            <nav>
+                <ul class="menu_box">
+                    <li><a href="">요리 목록</a></li>
+                    <li><a href="">인기 요리</a></li>
+                    <li><a href="">제철 요리</a></li>
+                    <li><a href="">안내 사항</a></li>
+                    <li><a href="">마이 페이지</a></li>
+                </ul>
+            </nav>
+    </header>
+    
+</body>
+</html>
