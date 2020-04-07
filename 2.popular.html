@@ -21,7 +21,6 @@
             background-color: white;
         }
         header {
-            max-width: 1400px;
             margin: 0;
             text-align: center;
         }
@@ -60,7 +59,7 @@
         }
         ul.menu_box {
             list-style-type: none;
-            text-align:center;
+            text-align: center;
             font-weight: bold;
             font-size: 1.25rem;
         }
@@ -68,18 +67,108 @@
             display: inline;
             margin-right:60px;
         }
-        
+        #top_slide {
+            display: block;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        .three_tops {
+            padding-right: -5px;
+            margin: 0 auto;
+        }
+        .famous_three_img {
+            width: 900px;
+            height: 450px;
+            border-radius: 10px;
+        }
+        .three_buttons {
+            width: 900px;
+            padding-left: 5px;
+            margin: 0 auto;
+        }
+        .slide_button {
+            width: 300px;
+            height: 50px;
+            box-sizing: border-box;
+            margin-left: -5px;
+        }
+        #other_menu {
+            height: auto;
+            margin: 0 auto;
+            margin-top: 150px;
+            text-align: center;
+        }
+        .slide_button h2 {
+            font-size: 1.25rem;
+            line-height: 0.5rem;
+        }
+        #other_menu h2 {
+            width: 500px;
+            height: 50px;
+            border-bottom: 2px solid lightgray;
+            margin: 0 auto;
+            font-size: 1.875rem;
+        }
+        .famous_dish {
+            display: inline-block;
+            margin: 50px;
+        }
+        .famous_extra_img {
+            width: 400px;
+            height: 300px;
+            border-radius: 10px;
+        }
         @media (max-width: 1200px) {
             nav {
                 max-width: 860px;
             }
-            
+            .famous_dish {
+                margin: 30px;
+            }
         @media (max-width: 978px) {
             nav {
                 max-width: 500px;
                 word-break: keep-all;
             }
-            
+            h1 {
+                font-size: 1.875rem;
+            }
+            .famous_three_img {
+                width: 540px;
+                height: 270px;
+            }
+            .three_buttons {
+                width: 540px;
+                padding-left: 5px;
+                margin: 0 auto;
+            }
+            .slide_button {
+                width: 180px;
+                height: 40px;
+                box-sizing: border-box;
+                margin-left: -5px;
+            }
+            #other_menu {
+                width: 580px;
+                margin-top: 100px;
+            }
+            .slide_button h2 {
+                font-size: 1.25rem;
+                line-height: 0.25rem;
+            }
+            #other_menu h2 {
+                font-size: 1.5rem;
+            }
+            .famous_dish {
+                display: inline-block;
+                margin: 10px;
+            }
+            .famous_extra_img {
+                width: 260px;
+                height: 195px;
+            }
         @media (max-width: 600px) {
             #logo {
                 width: 60px;
@@ -104,7 +193,7 @@
             }
             ul.menu_box {
                 padding: 8px 0;
-                margin: 0 auto 40px;
+                margin: 60px auto 40px;
                 background-color: lightgray;
                 list-style-type: none;
                 text-align: center;
@@ -117,6 +206,48 @@
                 font-weight: bold;
                 line-height: 1.25rem;
                 font-size: 0.875rem;
+            }
+            h1 {
+                font-size: 1.25rem;
+            }
+            .famous_three_img {
+                width: 348px;
+                height: 174px;
+            }
+            .three_buttons {
+                width: 348px;
+                padding-left: 5px;
+                margin: 0 auto;
+            }
+            .slide_button {
+                width: 116px;
+                height: 30px;
+                box-sizing: border-box;
+                margin-left: -5px;
+            }
+            #other_menu {
+                width: 100%;
+                margin-top: 60px;
+            }
+            .slide_button h2 {
+                font-size: 1rem;
+                line-height: 0.1rem;
+            }
+            #other_menu h2 {
+                width: 150px;
+                height: 30px;
+                border-bottom: 2px solid lightgray;
+                margin: 0 auto;
+                margin-bottom: 15px;
+                font-size: 1.125rem;
+            }
+            .famous_dish {
+                display: inline-block;
+                margin: 5px;
+            }
+            .famous_extra_img {
+                width: 160px;
+                height: 120px;
             }
     </style>
 </head>
@@ -136,6 +267,38 @@
                 </ul>
             </nav>
     </header>
-    
+    <section id="top_slide">
+        <h1>이번 주 인기 요리 TOP3</h1>
+        <div class="three_tops">
+            <img class="famous_three_img" src="picture/popular_%ED%94%BC%EC%9E%90%EB%B9%B5.jpeg">
+        </div>
+        <div class="three_buttons">
+            <button class="slide_button"><h2>1위 음식</h2></button>
+            <button class="slide_button"><h2>2위 음식</h2></button>
+            <button class="slide_button"><h2>3위 음식</h2></button>
+        </div>
+    </section>
+    <section id="other_menu">
+        <h2>부문별 인기요리</h2>
+        <article class="famous_dish">
+            <img class="famous_extra_img" src="picture/popular_%EB%94%B8%EA%B8%B0%ED%81%AC%EB%A0%88%ED%8E%98.jpeg">
+        </article>
+        <article class="famous_dish">
+            <img class="famous_extra_img" src="picture/popular_%EB%A9%94%EB%B0%80.jpeg">
+        </article>
+        <article class="famous_dish">
+            <img class="famous_extra_img" src="picture/popular_%EC%B9%98%ED%82%A8.jpeg">
+        </article>
+        <article class="famous_dish">
+            <img class="famous_extra_img" src="picture/popular_%EC%95%84%EC%9D%B4%EB%8F%8C%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98.jpeg">
+        </article>
+        <article class="famous_dish">
+            <img class="famous_extra_img" src="picture/popular_%EA%B7%B8%EB%A6%B0%20%EC%83%90%EB%9F%AC%EB%93%9C.jpeg">
+        </article>
+        <article class="famous_dish">
+            <img class="famous_extra_img" src="picture/popular_%EC%88%98%EB%B0%95%EC%89%90%EC%9D%B4%ED%81%AC.jpeg">
+        </article>
+    </section>
 </body>
 </html>
+
