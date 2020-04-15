@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="font/font.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="ingredient.css">
     <title>검색결과 - 요리터</title>
     <style>
-        html {
+        /*html {
             background-color: lightgray;
         }
         body {
@@ -36,16 +37,33 @@
             margin: auto;
             margin-bottom: 60px;
         }
+        #main_q {
+            width: 400px;
+            height: 39px;
+            margin: auto;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        button {
+            width: 90px;
+            height: 45px;
+            line-height: 37px;
+            text-align: center;
+            font-size: 1rem
+        }
         nav {
             width: 900px;
             margin: 60px auto 40px;
             line-height: 55px;
             background-color: lightgray;
-        }
+        }*/
         nav:last-of-type {
+            width: 0;
+            height: 0;
             display:none;
         }
-        ul.menu_box {
+        /*ul.menu_box {
             list-style-type: none;
             text-align:center;
             font-weight: bold;
@@ -54,8 +72,7 @@
         .menu_box li {
             display: inline;
             margin-right:60px;
-        }
-
+        }*/
         .select_option {
             height: auto;
             line-height: 100px;
@@ -86,16 +103,6 @@
             border-radius: 50%;
             border: 1.5px solid dimgray;
         }
-
-        #main_q {
-            width: 400px;
-            height: 39px;
-            margin: auto;
-            margin-bottom: 20px;
-            text-align: center;
-            font-size: 1rem;
-        }
-
         #result {
             margin: 0 auto;
             padding-left: 200px;
@@ -108,20 +115,10 @@
             text-align: center;
             font-size: 1rem
         }
-
-        button {
-            width: 90px;
-            height: 45px;
-            line-height: 37px;
-            text-align: center;
-            font-size: 1rem
-        }
-
         .select_ingredient_name {
             width: 500px;
             margin-left: 200px;
         }
-
         .how_much_location {
             width: 90%;
             text-align: right;
@@ -132,7 +129,6 @@
             height: 40px;
             font-size: 1rem;
         }
-
         h1 {
             font-size: 1.875rem;
         }
@@ -148,7 +144,6 @@
             margin: 0;
             word-break: break-word;
         }
-
         .food_list {
             max-width: 1200px;
             height: auto;
@@ -160,8 +155,7 @@
             height: 480px;
             margin: 20px;
             display: inline-block;
-         }
-
+        }
         .big_info {
             width: 230px;
             height: 150px;
@@ -184,10 +178,15 @@
             border: 1px solid lightgray;
             border-radius: 10px;
         }
-
+        
         @media (max-width: 1200px) {
-            nav:first-of-type {
+            /*nav {
                 max-width: 860px;
+            }*/
+            nav:last-of-type {
+                width: 0;
+                height: 0;
+                display:none;
             }
             #result {
                 padding-left: 0;
@@ -215,11 +214,15 @@
         }
 
         @media (max-width: 978px) {
-            nav:first-of-type {
+            /*nav {
                 max-width: 500px;
                 word-break: keep-all;
+            }*/
+            nav:last-of-type {
+                width: 0;
+                height: 0;
+                display: none;
             }
-
             #result {
                 padding-left: 0;
                 max-width: 780px;
@@ -277,7 +280,7 @@
         }
 
         @media (max-width: 600px) {
-            #logo {
+            /*#logo {
                 width: 60px;
                 height: 60px;
                 padding: 20px;
@@ -293,22 +296,22 @@
                 width: 50px;
                 vertical-align: middle;
             }
-
-            #result {
-                width: 100%;
-            }
-
             nav {
-                width:0;
+                display: block;
+                width: 100%;
+                line-height: 0;
+            }*/
+            nav:first-of-type {
+                width: 0;
+                height: 0;
                 display: none;
             }
-
             nav:last-of-type {
                 display: block;
                 width: 100%;
                 line-height: 0;
             }
-            ul.menu_box {
+            /*ul.menu_box {
                 padding: 8px 0;
                 margin: 0 auto 40px;
                 background-color: lightgray;
@@ -323,8 +326,10 @@
                 font-weight: bold;
                 line-height: 1.25rem;
                 font-size: 0.875rem;
+            }*/
+            #result {
+                width: 100%;
             }
-
             .every_icon {
                 width: 340px;
             }
@@ -334,8 +339,9 @@
                 margin: 0 7px;
             }
 
-            h1:before{
+            h1::before{
                 margin: 0;
+                margin-top: 40px;
                 font-size: 1.125rem;
                 word-break: keep-all;
             }
@@ -358,14 +364,12 @@
                 margin: auto;
                 font-size: 0.75rem;
             }
-
             .small_input {
                 width:250px;
                 height: 45px;
                 line-height: 45px;
                 vertical-align: middle;
             }
-
             .small_input input {
                 width: 150px;
                 vertical-align: middle;
@@ -379,7 +383,6 @@
                 height: 25px;
                 font-size: 0.875rem;
             }
-
             .food_list {
                 width: 100%;
             }

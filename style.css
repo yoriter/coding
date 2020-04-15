@@ -1,0 +1,110 @@
+html {
+    background-color: lightgray;
+}
+body {
+    font-family: 'NanumGothic-Regular','NanumGothic';
+    max-width: 1400px;
+    height: 100%;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+header {
+    margin: 0;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#logo {
+    width: 250px;
+    height: 250px;
+    display: block;
+    padding-top: 60px;
+    margin: auto;
+    margin-bottom: 60px;
+}
+#main_q {
+    width: 400px;
+    height: 39px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+button {
+    width: 90px;
+    height: 45px;
+    line-height: 37px;
+    text-align: center;
+    font-size: 1rem
+}
+nav {
+    width: 900px;
+    margin: 0px auto 40px;
+    line-height: 55px;
+    background-color: lightgray;
+}
+ul.menu_box {
+    list-style-type: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.menu_box li {
+    display: inline;
+    margin-right:60px;
+}
+    @media (max-width: 1200px) {
+        nav {
+            max-width: 860px;
+        }
+    }
+    @media (max-width: 978px) {
+        nav {
+            max-width: 500px;
+            word-break: keep-all;
+        }
+    }
+    @media (max-width: 600px) {
+        #logo {
+            width: 60px;
+            height: 60px;
+            padding: 20px;
+            margin: auto;
+            display: block;
+        }
+        #main_q {
+            width: 200px;
+            margin-bottom: 0;
+            vertical-align: middle;
+        }
+        button {
+            width: 50px;
+            vertical-align: middle;
+        }
+        nav {
+            width: 100%;
+            display: block;
+            line-height: 0;
+        }
+        ul.menu_box {
+            width: 100%;
+            padding: 8px 0;
+            margin: 60px auto 40px;
+            background-color: lightgray;
+            list-style-type: none;
+            text-align: center;
+        }
+        .menu_box li {
+            width: 40px;
+            margin: 0 10px;
+            display: inline-block;
+            word-break: keep-all;
+            font-weight: bold;
+            line-height: 1.25rem;
+            font-size: 0.875rem;
+        }
+    }
