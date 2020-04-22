@@ -1,14 +1,3 @@
-<!doctype html>
-<html>
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="font/font.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style_2.popular.css">
-    <title>인기요리 - 요리터</title>
-    <meta charset="utf-8">
-    <style>
         #top_slide {
             display: block;
             text-align: center;
@@ -187,61 +176,3 @@
                 height: 120px;
             }
         }
-    </style>
-</head>
-
-<body>
-    <header>
-        <a href=" "><img src="picture/logo.jpg" alt="로고" id="logo"></a>
-            <input type="text" placeholder="음식명/재료명 재검색" id="main_q">
-            <button>검색</button>
-            <nav>
-                <ul class="menu_box">
-                    <li><a href="">요리 목록</a></li>
-                    <li><a href="">인기 요리</a></li>
-                    <li><a href="">제철 요리</a></li>
-                    <li><a href="">안내 사항</a></li>
-                    <li><a href="">마이 페이지</a></li>
-                </ul>
-            </nav>
-    </header>
-    <section id="top_slide">
-        <h1>이번 주 인기 요리 TOP3</h1>
-        <div class="three_tops">
-           <ul class="slider">
-            <li class= "slide"><img class="slide_picture" src="picture/popular_%ED%94%BC%EC%9E%90%EB%B9%B5.jpeg"></li>
-            <li class= "slide"><img class="slide_picture" src="picture/popular_%ED%98%B8%EB%B0%95%EC%A3%BD.jpeg"></li>
-            <li class= "slide"><img class="slide_picture" src="picture/popular_%EC%88%9C%ED%95%9C%EC%B9%B4%EB%A0%88.jpeg"></li>
-            </ul>
-        </div>
-        <div class="three_buttons">
-            <a href="#" class="slide_button" id="first_b"><h2>1위 음식</h2></a>
-            <a href="#" class="slide_button" id="second_b"><h2>2위 음식</h2></a>
-            <a href="#" class="slide_button" id="third_b"><h2>3위 음식</h2></a>
-        </div>
-    </section>
-    <section id="other_menu">
-        <h2>부문별 인기요리</h2>
-        <article class="famous_dish">
-            <img class="famous_extra_img" src="picture/popular_%EB%94%B8%EA%B8%B0%ED%81%AC%EB%A0%88%ED%8E%98.jpeg">
-        </article>
-        <article class="famous_dish">
-            <img class="famous_extra_img" src="picture/popular_%EB%A9%94%EB%B0%80.jpeg">
-        </article>
-        <article class="famous_dish">
-            <img class="famous_extra_img" src="picture/popular_%EC%B9%98%ED%82%A8.jpeg">
-        </article>
-        <article class="famous_dish">
-            <img class="famous_extra_img" src="picture/popular_%EC%95%84%EC%9D%B4%EB%8F%8C%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%98.jpeg">
-        </article>
-        <article class="famous_dish">
-            <img class="famous_extra_img" src="picture/popular_%EA%B7%B8%EB%A6%B0%20%EC%83%90%EB%9F%AC%EB%93%9C.jpeg">
-        </article>
-        <article class="famous_dish">
-            <img class="famous_extra_img" src="picture/popular_%EC%88%98%EB%B0%95%EC%89%90%EC%9D%B4%ED%81%AC.jpeg">
-        </article>
-    </section>
-    <script src="script_2.popular.js"></script>
-</body>
-</html>
-
