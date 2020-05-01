@@ -1,0 +1,65 @@
+html {
+    background-color: lightgray;
+}
+body {
+    font-family: 'NanumGothic-Regular','NanumGothic';
+    max-width: 920px;
+    height: 100%;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+header {
+    margin: 0;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+#logo {
+    width: 350px;
+    height: 350px;
+    display: block;
+    padding-top: 50px;
+    margin: auto;
+    margin-bottom: 60px;
+}
+.select_q {
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+#first_q {
+    width: 500px;
+    height: 50px;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1rem;
+}
+.every_icon {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+.situation_icon {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 1.5px solid dimgray;
+}
+.btn_cover {
+    width: 200px;
+    margin: auto;
+    margin-top: 80px;
+    padding-bottom: 80px;
+}
+button {
+    width: 200px;
+    height: 50px;
+}
