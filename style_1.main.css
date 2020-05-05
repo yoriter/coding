@@ -32,6 +32,9 @@ a {
     font-weight: bold;
     text-align: center;
 }
+#first_q, button {
+    box-sizing: border-box;
+}
 #first_q {
     width: 500px;
     height: 50px;
